@@ -1,0 +1,122 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <script src="/pages/fullsearch/fullSearch.js"></script>
+    <script src="/js/data.js"></script>
+    <script src="/js/navigator.js"></script>
+
+    <link href="/css/default.css" rel="stylesheet" />
+    <link href="/pages/fullsearch/fullSearch.css" rel="stylesheet" />
+    <link href="/searchResults.css" rel="stylesheet" />
+
+    <script src="/js/data.js"></script>
+
+</head>
+<body>
+    <div class="fragment" id="backgroundColor">
+        <!--Item template for search item-->
+        <div id="itemtemplate1"  data-win-control="WinJS.Binding.Template">
+            <table id="tablesearchlist" >
+                <tr>
+                    <td>
+                        <div style="float: left; text-align: left">
+                            <img id="searchedImage" class="item-image" src="#" data-win-bind="src: backgroundImage; alt: title" />
+                        </div>
+                    </td>
+                    <td>
+                        <div id="divTemplate">
+                            <h6 style="font-family: 'Myriad Pro'; font-family: 'Myfont'; font-size: 20px;" data-win-bind="innerHTML: title"></h6>
+                            <table>
+                                <tr>
+                                    <td>
+                                        <img class="iconImage" src="/images/distance.png" /></td>
+                                    <td>
+                                        <div>
+                                            <h6 style="font-family: 'Myfont'; font-size: 12.5px; font-weight: bold;">Distance</h6>
+                                            <h6 style="font-family: 'Myfont'; font-size: 16.5px;" data-win-bind="innerText: distance"></h6>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                            <table>
+                                <tr>
+                                    <td>
+                                        <img class="iconImage" src="/images/Phone.png" /></td>
+                                    <td class="phoneNumber">
+                                        <div>
+                                            <h6 style="font-family: 'Myfont'; font-size: 12.5px; font-weight: bold;">Phone Number</h6>
+                                            <h6 style="font-family: 'Myfont'; font-size: 16.5px;" data-win-bind="innerText: phone"></h6>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <!--Item template for category type-->
+        <div id="regularListIconTextTemplate" data-win-control="WinJS.Binding.Template" style="display: none">
+            <div class="regularListIconTextItem-Detail_FullPage">
+                <h6 data-win-bind="innerText: title" style="overflow:hidden; font-family: 'Myfont'; text-overflow:ellipsis; -o-text-overflow:ellipsis;"></h6>
+            </div>
+            <div class="regularListIconTextItem">
+                <img src="#" class="regularListIconTextItem-Image" data-win-bind="src: backgroundImageSearch" />
+            </div>
+        </div>
+
+        <!--Top header -->
+        <header id="headerSection" aria-label="Header content" role="banner">
+            <button class="win-backbutton backgroundButton" aria-label="Back" disabled type="button"></button>
+            <div class="titlearea">
+                <h1 class="pagetitle win-type-ellipsis">Search</h1>
+            </div>
+        </header>
+        <div id="mainGrid">
+            <!-- The content that will be loaded and displayed. -->
+            <div id="categoryList">
+                <div id="listView"
+                    class="win-selectionstylefilled"
+                    data-win-control="WinJS.UI.ListView"
+                    data-win-options="{ 
+                selectionMode: 'multi', 
+                tapBehavior: 'toggleSelect', 
+                swipeBehavior: 'none', 
+                layout: { type: WinJS.UI.GridLayout } 
+            }">
+                </div>
+            </div>
+            <div id="searchedDiv">
+                <section id="searchTextSection">
+                    <table id="searchTable">
+                        <tr>
+                            <td>
+                                <input id="searchText" type="search" />
+                            </td>
+                            <td>
+                                <img id="getSearchFull" src="/images/SearchBackground.png" style="background-color: gray; width: 30px; height: 32px; margin-top: 2px" />
+                            </td>
+                        </tr>
+                    </table>
+                </section>
+
+                <!--<section aria-label="Main content" role="main" style="margin-top: 50px;-ms-grid-row:2;">-->
+                <div id="searchList" class="resultslist win-selectionstylefilled" aria-label="Search results" data-win-control="WinJS.UI.ListView"
+                    data-win-options="{ 
+                selectionMode: 'none', 
+                swipeBehavior: 'none', 
+                layout: { type: WinJS.UI.ListLayout } 
+            }">
+                </div>
+                <div class="resultslist win-selectionstylefilled" id="txtnoresult" style="font-size:20px; font-family: 'Myfont'; visibility:hidden; margin-top:150px; margin-left:20px;">First click on the report in which you would like to search.</div>
+                 <div class="resultslist win-selectionstylefilled" id="txtnoresultfound" style="font-size:20px; font-family: 'Myfont'; visibility:hidden; margin-top:150px; margin-left:20px;">No result found.</div>
+                <div class="resultslist win-selectionstylefilled" id="txtempty" style="font-size:20px; font-family: 'Myfont'; visibility:hidden; margin-top:150px; margin-left:20px;">No result found.</div>
+                <!--</section>-->
+            </div>
+        </div>
+    </div>
+    <!-- ENDSETTINGSFLYOUT -->
+</body>
+</html>
+

@@ -1,0 +1,602 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<response> 
+    <row _id="1" _uuid="157B5336-C4BE-4464-A97F-6B91B055280E" _position="1" _address="http://govfinder.socrata.com/resource/hwum-ssyq/1">
+      <city>Chicago</city>
+      <dataset_name>Mental Health Clinics</dataset_name>
+      <url>https://data.cityofchicago.org/Health-Human-Services/Mental-Health-Clinics-Map/uwrs-gd82</url>
+      <api_url>http://data.cityofchicago.org/resource/uwrs-gd82.json</api_url>
+      <isvalid>TRUE</isvalid>
+    </row>
+    <row _id="2" _uuid="49BAEFE6-96CD-4C3D-895D-E7D9D1135331" _position="2" _address="http://govfinder.socrata.com/resource/hwum-ssyq/2">
+      <city>Chicago</city>
+      <dataset_name>Recycling Dropoff Sites</dataset_name>
+      <url>https://data.cityofchicago.org/Sanitation/Recycling-Dropoff-Sites/27cy-fdic</url>
+      <isvalid>TRUE</isvalid>
+    </row>
+    <row _id="3" _uuid="0C2CB040-9A36-4E6D-B5D1-EE41C5897B5B" _position="3" _address="http://govfinder.socrata.com/resource/hwum-ssyq/3">
+      <city>Chicago</city>
+      <dataset_name>Alternative Fuel Locations</dataset_name>
+      <url>https://data.cityofchicago.org/Environment-Sustainable-Development/Map-Alternative-Fuel-Locations/iq3c-68ew</url>
+      <api_url>http://data.cityofchicago.org/resource/iq3c-68ew.json</api_url>
+      <isvalid>TRUE</isvalid>
+    </row>
+    <row _id="4" _uuid="B21AAB83-03A7-4452-927F-8EE81833043E" _position="4" _address="http://govfinder.socrata.com/resource/hwum-ssyq/4">
+      <city>Chicago</city>
+      <dataset_name>Flu and Health Clinics</dataset_name>
+      <url>https://data.cityofchicago.org/Health-Human-Services/Flu-and-Health-Clinics-Map/hszy-cyef</url>
+      <api_url>http://data.cityofchicago.org/resource/hszy-cyef.json</api_url>
+      <isvalid>TRUE</isvalid>
+    </row>
+    <row _id="5" _uuid="21DDEDA2-011B-41EC-856C-4D3029CF25D7" _position="5" _address="http://govfinder.socrata.com/resource/hwum-ssyq/5">
+      <city>Chicago</city>
+      <dataset_name>Landmarks</dataset_name>
+      <url>https://data.cityofchicago.org/Historic-Preservation/Individual-Landmarks-Map/habu-n236</url>
+      <api_url>http://data.cityofchicago.org/resource/habu-n236.json</api_url>
+      <isvalid>TRUE</isvalid>
+    </row>
+    <row _id="6" _uuid="7E11D98D-11F8-402A-AAD5-B31DCC1A84AC" _position="6" _address="http://govfinder.socrata.com/resource/hwum-ssyq/6">
+      <city>Chicago</city>
+      <dataset_name>Licensed Substance Abuse Treatment Providers</dataset_name>
+      <url>https://data.cityofchicago.org/Health-Human-Services/Public-Health-Services-Licensed-Substance-Abuse-Tr/232q-2cqr</url>
+      <api_url>http://data.cityofchicago.org/resource/232q-2cqr.json</api_url>
+      <isvalid>TRUE</isvalid>
+    </row>
+    <row _id="7" _uuid="1439D7E1-E9DD-450B-95AD-A2B132E75391" _position="7" _address="http://govfinder.socrata.com/resource/hwum-ssyq/7">
+      <city>Chicago</city>
+      <dataset_name>Workforce Centers</dataset_name>
+      <url>https://data.cityofchicago.org/Health-Human-Services/Workforce-Centers-Map/i4rz-w47p</url>
+      <api_url>http://data.cityofchicago.org/resource/i4rz-w47p.json</api_url>
+      <isvalid>TRUE</isvalid>
+    </row>
+    <row _id="8" _uuid="842A2FEC-A053-442B-B476-AB2E1717C366" _position="8" _address="http://govfinder.socrata.com/resource/hwum-ssyq/8">
+      <city>Chicago</city>
+      <dataset_name>Green Roofs</dataset_name>
+      <url>https://data.cityofchicago.org/Environment-Sustainable-Development/Green-Roofs-Map/u23m-pa73</url>
+      <api_url>http://data.cityofchicago.org/resource/u23m-pa73.json</api_url>
+      <isvalid>TRUE</isvalid>
+    </row>
+    <row _id="9" _uuid="A1B169CC-43A5-42A0-B0A1-B72C1DA09340" _position="9" _address="http://govfinder.socrata.com/resource/hwum-ssyq/9">
+      <city>Chicago</city>
+      <dataset_name>Police Stations</dataset_name>
+      <url>https://data.cityofchicago.org/Sanitation/Map-Street-Sweeping-2013/rjwk-epe7</url>
+      <isvalid>TRUE</isvalid>
+    </row>
+    <row _id="10" _uuid="2EEE71B7-C530-44F6-A64F-E9B92D1E5E61" _position="10" _address="http://govfinder.socrata.com/resource/hwum-ssyq/10">
+      <city>Chicago</city>
+      <dataset_name>Senior Centers</dataset_name>
+      <url>https://data.cityofchicago.org/Health-Human-Services/Senior-Centers-Map/8ayb-6mjs</url>
+      <api_url>http://data.cityofchicago.org/resource/8ayb-6mjs.json</api_url>
+      <isvalid>TRUE</isvalid>
+    </row>
+    <row _id="11" _uuid="3BE280A9-1658-4648-857A-D7E7A366DF3A" _position="11" _address="http://govfinder.socrata.com/resource/hwum-ssyq/11">
+      <city>Chicago</city>
+      <dataset_name>STI Clinics</dataset_name>
+      <url>https://data.cityofchicago.org/Health-Human-Services/STI-Specialty-Clinics-Map/aewr-nzrt</url>
+      <api_url>http://data.cityofchicago.org/resource/aewr-nzrt.json</api_url>
+      <isvalid>TRUE</isvalid>
+    </row>
+    <row _id="12" _uuid="CBCB5946-D304-48B1-9710-0AFC0946CB8A" _position="12" _address="http://govfinder.socrata.com/resource/hwum-ssyq/12">
+      <city>Chicago</city>
+      <dataset_name>Cooling Centers</dataset_name>
+      <url>https://data.cityofchicago.org/Health-Human-Services/Cooling-Centers-Map/r23p-6uic</url>
+      <api_url>http://data.cityofchicago.org/resource/r23p-6uic.json</api_url>
+      <isvalid>TRUE</isvalid>
+    </row>
+    <row _id="13" _uuid="68021BE9-654B-4AB2-A550-B072DEAE9CEE" _position="13" _address="http://govfinder.socrata.com/resource/hwum-ssyq/13">
+      <city>Chicago</city>
+      <dataset_name>Women, Infant, Children Health Clinics</dataset_name>
+      <url>https://data.cityofchicago.org/Health-Human-Services/Women-Infant-Children-Health-Clinics-Map/65vt-ydgw</url>
+      <api_url>http://data.cityofchicago.org/resource/65vt-ydgw.json</api_url>
+      <isvalid>TRUE</isvalid>
+    </row>
+    <row _id="14" _uuid="6B93F4BD-0095-4D22-8715-266C875F28CD" _position="14" _address="http://govfinder.socrata.com/resource/hwum-ssyq/14">
+      <city>Chicago</city>
+      <dataset_name>Ward Offices</dataset_name>
+      <url>https://data.cityofchicago.org/Facilities-Geographic-Boundaries/Ward-Offices-Map/8yti-tif4</url>
+      <api_url>http://data.cityofchicago.org/resource/8yti-tif4.json</api_url>
+      <isvalid>TRUE</isvalid>
+    </row>
+    <row _id="15" _uuid="941C71DA-60AF-4A95-9C55-BF724195FBF0" _position="15" _address="http://govfinder.socrata.com/resource/hwum-ssyq/15">
+      <city>Chicago</city>
+      <dataset_name>Crimes in the Last Year Minus Last 7 Days</dataset_name>
+      <url>https://data.cityofchicago.org/Public-Safety/Crimes-Map/dfnk-7re6</url>
+      <api_url>http://data.cityofchicago.org/resource/dfnk-7re6.json</api_url>
+      <isvalid>TRUE</isvalid>
+    </row>
+    <row _id="16" _uuid="C6A3CF00-43CF-49D8-80E4-8F2857C9A9FF" _position="16" _address="http://govfinder.socrata.com/resource/hwum-ssyq/16">
+      <city>Chicago</city>
+      <dataset_name>Christmas Tree Recycling Locations</dataset_name>
+      <url>https://data.cityofchicago.org/Environment-Sustainable-Development/Map-of-Christmas-Tree-Recycling-Locations/495s-83kj</url>
+      <api_url>http://data.cityofchicago.org/resource/495s-83kj.json</api_url>
+      <isvalid>TRUE</isvalid>
+    </row>
+    <row _id="17" _uuid="B0316992-AFB4-474C-A143-C964AF87B754" _position="17" _address="http://govfinder.socrata.com/resource/hwum-ssyq/17">
+      <city>Chicago</city>
+      <dataset_name>Pedway Routes</dataset_name>
+      <url>https://data.cityofchicago.org/Transportation/Pedway-Routes/aqxt-626s</url>
+      <isvalid>TRUE</isvalid>
+    </row>
+    <row _id="18" _uuid="8D7323AC-2028-48F7-915D-CB5C360DCB09" _position="18" _address="http://govfinder.socrata.com/resource/hwum-ssyq/18">
+      <city>Chicago</city>
+      <dataset_name>Condom Distribution Sites</dataset_name>
+      <url>https://data.cityofchicago.org/Health-Human-Services/Condom-Distribution-Sites-Map/jytx-u9zf</url>
+      <api_url>http://data.cityofchicago.org/resource/jytx-u9zf.json</api_url>
+      <isvalid>TRUE</isvalid>
+    </row>
+    <row _id="19" _uuid="3F45DCA4-5221-42F6-95F3-49921E75C106" _position="19" _address="http://govfinder.socrata.com/resource/hwum-ssyq/19">
+      <city>Chicago</city>
+      <dataset_name>Neighborhood Health Clinics</dataset_name>
+      <url>https://data.cityofchicago.org/Health-Human-Services/Neighborhood-Health-Clinics-Historical-Map/3pg4-hfgi</url>
+      <api_url>http://data.cityofchicago.org/resource/3pg4-hfgi.json</api_url>
+      <isvalid>TRUE</isvalid>
+    </row>
+    <row _id="20" _uuid="12D7CCD2-7919-4004-AAFC-18734ABBE2B7" _position="20" _address="http://govfinder.socrata.com/resource/hwum-ssyq/20">
+      <city>Chicago</city>
+      <dataset_name>Bike Routes</dataset_name>
+      <url>https://data.cityofchicago.org/Transportation/Bike-Routes/3w5d-sru8</url>
+      <isvalid>TRUE</isvalid>
+    </row>
+    <row _id="21" _uuid="169C5AF6-FF62-4972-9277-7D6E33102D22" _position="21" _address="http://govfinder.socrata.com/resource/hwum-ssyq/21">
+      <city>Chicago</city>
+      <dataset_name>Food Inspections (2010 - Present)</dataset_name>
+      <url>https://data.cityofchicago.org/Health-Human-Services/Food-Inspections-Map/cnfp-tsxc</url>
+      <api_url>http://data.cityofchicago.org/resource/cnfp-tsxc.json</api_url>
+      <isvalid>TRUE</isvalid>
+    </row>
+    <row _id="22" _uuid="13EE9D36-3C7C-45A5-85B0-A4A09B260C9C" _position="22" _address="http://govfinder.socrata.com/resource/hwum-ssyq/22">
+      <city>Chicago</city>
+      <dataset_name>Community Service Centers</dataset_name>
+      <url>https://data.cityofchicago.org/Health-Human-Services/Community-Service-Centers-Map/tyd3-k85v</url>
+      <api_url>http://data.cityofchicago.org/resource/tyd3-k85v.json</api_url>
+      <isvalid>TRUE</isvalid>
+    </row>
+    <row _id="23" _uuid="D5FEC544-5EB3-4B1E-9B6E-7DF963E12ACC" _position="23" _address="http://govfinder.socrata.com/resource/hwum-ssyq/23">
+      <city>Chicago</city>
+      <dataset_name>Chicago Public School Locations (School Year 2013/2014)</dataset_name>
+      <url>https://data.cityofchicago.org/Education/CPS-School-Locations-SY13-14/v5tm-77mr</url>
+      <isvalid>TRUE</isvalid>
+    </row>
+    <row _id="24" _uuid="836D6FB6-9766-4170-BFBE-C352E012B463" _position="24" _address="http://govfinder.socrata.com/resource/hwum-ssyq/24">
+      <city>Chicago</city>
+      <dataset_name>Connect Chicago Locations</dataset_name>
+      <url>https://data.cityofchicago.org/Education/Connect-Chicago-Locations-Map/4jzv-pgsc</url>
+      <api_url>http://data.cityofchicago.org/resource/4jzv-pgsc.json</api_url>
+      <isvalid>TRUE</isvalid>
+    </row>
+    <row _id="25" _uuid="8DFCB480-6561-4656-BA94-1E8BB849CB17" _position="25" _address="http://govfinder.socrata.com/resource/hwum-ssyq/25">
+      <city>Chicago</city>
+      <dataset_name>Parks</dataset_name>
+      <url>https://data.cityofchicago.org/Parks-Recreation/Parks-Map/2eaw-bdhe</url>
+      <api_url>http://data.cityofchicago.org/resource/2eaw-bdhe.json</api_url>
+      <isvalid>TRUE</isvalid>
+    </row>
+    <row _id="26" _uuid="B69573D5-0951-4200-B118-3F03FD3B8752" _position="26" _address="http://govfinder.socrata.com/resource/hwum-ssyq/26">
+      <city>Chicago</city>
+      <dataset_name>Parks (Dog Friendly)</dataset_name>
+      <url>https://data.cityofchicago.org/Parks-Recreation/Parks-Dog-Friendly-Map/p97q-qace</url>
+      <api_url>http://data.cityofchicago.org/resource/p97q-qace.json</api_url>
+      <isvalid>TRUE</isvalid>
+    </row>
+    <row _id="27" _uuid="45327D4B-53B4-4453-B7BF-6F0F209271CF" _position="27" _address="http://govfinder.socrata.com/resource/hwum-ssyq/27">
+      <city>Chicago</city>
+      <dataset_name>Farmer's Markets</dataset_name>
+      <url>https://data.cityofchicago.org/Environment-Sustainable-Development/Farmers-Markets-Map/atzs-u7pv</url>
+      <api_url>http://data.cityofchicago.org/resource/atzs-u7pv.json</api_url>
+      <isvalid>TRUE</isvalid>
+    </row>
+    <row _id="28" _uuid="5ABA1D22-8593-43DB-8676-C612698D22E4" _position="28" _address="http://govfinder.socrata.com/resource/hwum-ssyq/28">
+      <city>Chicago</city>
+      <dataset_name>Fire Stations</dataset_name>
+      <url>https://data.cityofchicago.org/Public-Safety/Fire-Stations-Map/hp65-bcxv</url>
+      <api_url>http://data.cityofchicago.org/resource/hp65-bcxv.json</api_url>
+      <isvalid>TRUE</isvalid>
+    </row>
+    <row _id="29" _uuid="61F3EE35-6B62-4D8E-8E52-8D5DECB81129" _position="29" _address="http://govfinder.socrata.com/resource/hwum-ssyq/29">
+      <city>Chicago</city>
+      <dataset_name>Bike Racks</dataset_name>
+      <url>https://data.cityofchicago.org/Transportation/Bike-Racks-Map/4ywc-hr3a</url>
+      <api_url>http://data.cityofchicago.org/resource/4ywc-hr3a.json</api_url>
+      <isvalid>TRUE</isvalid>
+    </row>
+    <row _id="30" _uuid="A7696E42-2740-411D-AA07-2DDE7CB01A80" _position="30" _address="http://govfinder.socrata.com/resource/hwum-ssyq/30">
+      <city>New York</city>
+      <dataset_name>Subway Entrances</dataset_name>
+      <url>https://data.cityofnewyork.us/Transportation/Subway-Entrances/drex-xx56</url>
+      <isvalid>TRUE</isvalid>
+    </row>
+    <row _id="31" _uuid="0D3AA1CA-DC15-4830-87E2-49405FDC4D63" _position="31" _address="http://govfinder.socrata.com/resource/hwum-ssyq/31">
+      <city>New York</city>
+      <dataset_name>Parks</dataset_name>
+      <url>https://data.cityofnewyork.us/Housing-Development/Map-of-Parks/jc79-4imn</url>
+      <isvalid>TRUE</isvalid>
+    </row>
+    <row _id="32" _uuid="7707AE48-B6D6-4843-BD83-1FDBBD22F357" _position="32" _address="http://govfinder.socrata.com/resource/hwum-ssyq/32">
+      <city>New York</city>
+      <dataset_name>Colleges and Universities</dataset_name>
+      <url>https://data.cityofnewyork.us/Education/Basic-Description-of-Colleges-and-Universities/42xp-mmeq</url>
+      <api_url>http://data.cityofnewyork.us/resource/42xp-mmeq.json</api_url>
+      <isvalid>TRUE</isvalid>
+    </row>
+    <row _id="33" _uuid="3BE6D68E-9394-4211-8A76-5107EE384DBE" _position="33" _address="http://govfinder.socrata.com/resource/hwum-ssyq/33">
+      <city>New York</city>
+      <dataset_name>Water Fountains</dataset_name>
+      <url>https://data.cityofnewyork.us/Recreation/Map-of-Water-Fountains/4z75-dszx</url>
+      <isvalid>TRUE</isvalid>
+    </row>
+    <row _id="34" _uuid="B8A28712-948F-4012-8283-0137FAFE0DBE" _position="34" _address="http://govfinder.socrata.com/resource/hwum-ssyq/34">
+      <city>New York</city>
+      <dataset_name>Fire Houses</dataset_name>
+      <url>https://data.cityofnewyork.us/Public-Safety/Map-of-NYC-Fire-Houses/pg99-2ihy</url>
+      <api_url>http://data.cityofnewyork.us/resource/pg99-2ihy.json</api_url>
+      <isvalid>TRUE</isvalid>
+    </row>
+    <row _id="35" _uuid="FB58B283-3B5D-48E6-A140-619685B63E6F" _position="35" _address="http://govfinder.socrata.com/resource/hwum-ssyq/35">
+      <city>New York</city>
+      <dataset_name>NYC Health and Hospital Corp. Facilities</dataset_name>
+      <url>https://data.cityofnewyork.us/Health/NYC-Health-and-Hospitals-Corporation-Facilities/ymhw-9cz9</url>
+      <api_url>http://data.cityofnewyork.us/resource/ymhw-9cz9.json</api_url>
+      <isvalid>TRUE</isvalid>
+    </row>
+    <row _id="36" _uuid="6881D18A-D3F7-4A59-9E08-6B15075F0B52" _position="36" _address="http://govfinder.socrata.com/resource/hwum-ssyq/36">
+      <city>New York</city>
+      <dataset_name>Green Markets</dataset_name>
+      <url>https://data.cityofnewyork.us/Environment/Green-Market-Locations/26dn-w9sw</url>
+      <api_url>http://data.cityofnewyork.us/resource/26dn-w9sw.json</api_url>
+      <isvalid>TRUE</isvalid>
+    </row>
+    <row _id="37" _uuid="AB218279-25A0-4B57-802C-E01CCB2565AB" _position="37" _address="http://govfinder.socrata.com/resource/hwum-ssyq/37">
+      <city>New York</city>
+      <dataset_name>NYC Landmarks</dataset_name>
+      <url>https://data.cityofnewyork.us/Recreation/NYC-Landmarks/sper-c9ks</url>
+      <api_url>http://data.cityofnewyork.us/resource/sper-c9ks.json</api_url>
+      <isvalid>TRUE</isvalid>
+    </row>
+    <row _id="38" _uuid="56BBFBBE-06EF-4D68-9EA7-0853E19D1095" _position="38" _address="http://govfinder.socrata.com/resource/hwum-ssyq/38">
+      <city>New York</city>
+      <dataset_name>Monuments</dataset_name>
+      <url>https://data.cityofnewyork.us/Housing-Development/Map-of-Monuments/hdr6-7r95</url>
+      <isvalid>TRUE</isvalid>
+    </row>
+    <row _id="39" _uuid="0BF577AA-941C-4AA8-84A0-464242FB9B15" _position="39" _address="http://govfinder.socrata.com/resource/hwum-ssyq/39">
+      <city>New York</city>
+      <dataset_name>Museums and Galleries</dataset_name>
+      <url>https://data.cityofnewyork.us/Recreation/Museums-and-Galleries/sat5-adpb</url>
+      <isvalid>TRUE</isvalid>
+    </row>
+    <row _id="40" _uuid="588F23F0-F185-4CA0-8975-2226FE4A6433" _position="40" _address="http://govfinder.socrata.com/resource/hwum-ssyq/40">
+      <city>New York</city>
+      <dataset_name>PATH Stations</dataset_name>
+      <url>https://data.cityofnewyork.us/Transportation/Path-Station-Locations/n6ct-9993</url>
+      <api_url>http://data.cityofnewyork.us/resource/n6ct-9993.json</api_url>
+      <isvalid>TRUE</isvalid>
+    </row>
+    <row _id="41" _uuid="867E804E-FC3F-440C-8693-17142D3EE7A7" _position="41" _address="http://govfinder.socrata.com/resource/hwum-ssyq/41">
+      <city>New York</city>
+      <dataset_name>Lower Manhattan Parking Garages</dataset_name>
+      <url>https://data.cityofnewyork.us/Transportation/Lower-Manhattan-Parking-Garages/urmm-7q9v</url>
+      <api_url>http://data.cityofnewyork.us/resource/urmm-7q9v.json</api_url>
+      <isvalid>TRUE</isvalid>
+    </row>
+    <row _id="42" _uuid="4870EE82-B3D2-482C-A406-1EC3E8F4CB62" _position="42" _address="http://govfinder.socrata.com/resource/hwum-ssyq/42">
+      <city>New York</city>
+      <dataset_name>Basketball Courts</dataset_name>
+      <url>https://data.cityofnewyork.us/Housing-Development/Map-of-Basketball-Courts/u9za-vtg3</url>
+      <isvalid>TRUE</isvalid>
+    </row>
+    <row _id="43" _uuid="6041B128-B101-4EAB-A097-9637EF8D7715" _position="43" _address="http://govfinder.socrata.com/resource/hwum-ssyq/43">
+      <city>New York</city>
+      <dataset_name>Playgrounds</dataset_name>
+      <url>https://data.cityofnewyork.us/Housing-Development/Map-of-Playgrounds/dqv3-x5im</url>
+      <isvalid>TRUE</isvalid>
+    </row>
+    <row _id="44" _uuid="1371F55E-4BBF-4DD6-A8BD-B8C4B3AAD141" _position="44" _address="http://govfinder.socrata.com/resource/hwum-ssyq/44">
+      <city>New York</city>
+      <dataset_name>Senior Centers</dataset_name>
+      <url>https://data.cityofnewyork.us/Social-Services/Senior-Center-Locations/2t9n-8jnw</url>
+      <api_url>http://data.cityofnewyork.us/resource/2t9n-8jnw.json</api_url>
+      <isvalid>TRUE</isvalid>
+    </row>
+    <row _id="45" _uuid="4E7FACB9-0113-460F-B36C-C836AE6DFCB1" _position="45" _address="http://govfinder.socrata.com/resource/hwum-ssyq/45">
+      <city>New York</city>
+      <dataset_name>Parking Spots</dataset_name>
+      <url>https://data.cityofnewyork.us/Transportation/NYC-Parking-Spots/nxab-ch29</url>
+      <api_url>http://data.cityofnewyork.us/resource/nxab-ch29.json</api_url>
+      <isvalid>TRUE</isvalid>
+    </row>
+    <row _id="46" _uuid="92818CD6-82A4-4B51-8238-AF60EB253CBB" _position="46" _address="http://govfinder.socrata.com/resource/hwum-ssyq/46">
+      <city>New York</city>
+      <dataset_name>Handball Courts</dataset_name>
+      <url>https://data.cityofnewyork.us/Housing-Development/Map-of-Handball-Courts/6rdw-7wk8</url>
+      <isvalid>TRUE</isvalid>
+    </row>
+    <row _id="47" _uuid="6D4AE314-ACCF-406A-A3E4-E6948CB7C8F3" _position="47" _address="http://govfinder.socrata.com/resource/hwum-ssyq/47">
+      <city>New York</city>
+      <dataset_name>City Day Care Center Locations</dataset_name>
+      <url>https://data.cityofnewyork.us/Social-Services/City-Day-Care-Center-Locations/rwnw-ne5z</url>
+      <api_url>http://data.cityofnewyork.us/resource/rwnw-ne5z.json</api_url>
+      <isvalid>TRUE</isvalid>
+    </row>
+    <row _id="48" _uuid="E67C2961-603D-481E-AF95-8565359B25DB" _position="48" _address="http://govfinder.socrata.com/resource/hwum-ssyq/48">
+      <city>New York</city>
+      <dataset_name>Publicly Available Waterfront Spaces (PAWS)</dataset_name>
+      <url>https://data.cityofnewyork.us/City-Government/Publicly-Accessible-Waterfront-Spaces-PAWS-/388s-pnvc</url>
+      <isvalid>TRUE</isvalid>
+    </row>
+    <row _id="49" _uuid="7F9EB072-FF56-461F-854B-C23B0D4B27B8" _position="49" _address="http://govfinder.socrata.com/resource/hwum-ssyq/49">
+      <city>New York</city>
+      <dataset_name>Theatres</dataset_name>
+      <url>https://data.cityofnewyork.us/Recreation/Theaters/kdu2-865w</url>
+      <isvalid>TRUE</isvalid>
+    </row>
+    <row _id="50" _uuid="CF10FB46-A299-4918-90F2-8E28E8C8CBCF" _position="50" _address="http://govfinder.socrata.com/resource/hwum-ssyq/50">
+      <city>New York</city>
+      <dataset_name>Soccer and Football Fields</dataset_name>
+      <url>https://data.cityofnewyork.us/Housing-Development/Map-of-Soccer-and-Football-Fields/qqsi-vm9f</url>
+      <isvalid>TRUE</isvalid>
+    </row>
+    <row _id="51" _uuid="C2F5B1C8-0152-4D15-9271-DE2BC1B09FC7" _position="51" _address="http://govfinder.socrata.com/resource/hwum-ssyq/51">
+      <city>New York</city>
+      <dataset_name>Women's Resources</dataset_name>
+      <url>https://data.cityofnewyork.us/Social-Services/Women-s-Resource-Map/69bm-3bc2</url>
+      <api_url>http://data.cityofnewyork.us/resource/69bm-3bc2.json</api_url>
+      <isvalid>TRUE</isvalid>
+    </row>
+    <row _id="52" _uuid="B2588884-E929-4EAD-8A5B-77C6CFEED060" _position="52" _address="http://govfinder.socrata.com/resource/hwum-ssyq/52">
+      <city>New York</city>
+      <dataset_name>Pools</dataset_name>
+      <url>https://data.cityofnewyork.us/Housing-Development/Map-of-Pools/2jq5-qxzu</url>
+      <isvalid>TRUE</isvalid>
+    </row>
+    <row _id="53" _uuid="83CDA12F-662F-403E-B5DA-AE6C6E555363" _position="53" _address="http://govfinder.socrata.com/resource/hwum-ssyq/53">
+      <city>New York</city>
+      <dataset_name>Universal Pre-K Locations</dataset_name>
+      <url>https://data.cityofnewyork.us/Education/Universal-Pre-K-Locations/m8nt-a4xh</url>
+      <api_url>http://data.cityofnewyork.us/resource/m8nt-a4xh.json</api_url>
+      <isvalid>TRUE</isvalid>
+    </row>
+    <row _id="54" _uuid="CFB9AD24-90CB-4C4F-9195-703604A913A4" _position="54" _address="http://govfinder.socrata.com/resource/hwum-ssyq/54">
+      <city>New York</city>
+      <dataset_name>Nursing Homes</dataset_name>
+      <url>https://data.cityofnewyork.us/Health/Nursing-Homes/9tqc-rnkr</url>
+      <isvalid>TRUE</isvalid>
+    </row>
+    <row _id="55" _uuid="304D1085-F67F-4BD2-B0AC-434EBE7428C0" _position="55" _address="http://govfinder.socrata.com/resource/hwum-ssyq/55">
+      <city>New York</city>
+      <dataset_name>Tennis Courts</dataset_name>
+      <url>https://data.cityofnewyork.us/Housing-Development/Map-of-Tennis-Courts/w46b-46c5</url>
+      <isvalid>TRUE</isvalid>
+    </row>
+    <row _id="56" _uuid="71770CF0-E1F1-4C7C-82C9-2D350AB198EA" _position="56" _address="http://govfinder.socrata.com/resource/hwum-ssyq/56">
+      <city>New York</city>
+      <dataset_name>NYC Agency Service Centers</dataset_name>
+      <url>https://data.cityofnewyork.us/Social-Services/Agency-Service-Center/nn5y-wmuj</url>
+      <isvalid>TRUE</isvalid>
+    </row>
+    <row _id="57" _uuid="CCD87541-FF25-47A6-868F-4E268C10A6C3" _position="57" _address="http://govfinder.socrata.com/resource/hwum-ssyq/57">
+      <city>New York</city>
+      <dataset_name>Kayak and Canoe Launches</dataset_name>
+      <url>https://data.cityofnewyork.us/Housing-Development/Map-of-Kayak-and-Canoe-Launches/7azv-2zwg</url>
+      <isvalid>TRUE</isvalid>
+    </row>
+    <row _id="58" _uuid="9B5FF8B6-9C11-4226-A66E-C707CD724A11" _position="58" _address="http://govfinder.socrata.com/resource/hwum-ssyq/58">
+      <city>New York</city>
+      <dataset_name>Botanical Gardends</dataset_name>
+      <url>https://data.cityofnewyork.us/Environment/Botanical-Gardens/hrii-hezj</url>
+      <isvalid>TRUE</isvalid>
+    </row>
+    <row _id="59" _uuid="AF8AC653-06AE-47AB-A192-CA08C6B12D79" _position="59" _address="http://govfinder.socrata.com/resource/hwum-ssyq/59">
+      <city>New York</city>
+      <dataset_name>Post Offices</dataset_name>
+      <url>https://data.cityofnewyork.us/City-Government/Post-Office-Locations/r4n6-jzcf</url>
+      <api_url>http://data.cityofnewyork.us/resource/r4n6-jzcf.json</api_url>
+      <isvalid>TRUE</isvalid>
+    </row>
+    <row _id="60" _uuid="2DCCC684-A8AB-4EA3-80AE-071542552357" _position="60" _address="http://govfinder.socrata.com/resource/hwum-ssyq/60">
+      <city>New York</city>
+      <dataset_name>Baseball and Softball Diamonds</dataset_name>
+      <url>https://data.cityofnewyork.us/Housing-Development/Map-of-Baseball-and-Softball-Diamonds/6czp-hu6e</url>
+      <isvalid>TRUE</isvalid>
+    </row>
+    <row _id="61" _uuid="7ECCD302-1EA2-4E38-B727-A8D10B7D12AD" _position="61" _address="http://govfinder.socrata.com/resource/hwum-ssyq/61">
+      <city>New York</city>
+      <dataset_name>JFK Airtrain Station Locations</dataset_name>
+      <url>https://data.cityofnewyork.us/Transportation/JFK-Airtrain-Station-Locations/jnc4-rzi5</url>
+      <api_url>http://data.cityofnewyork.us/resource/jnc4-rzi5.json</api_url>
+      <isvalid>TRUE</isvalid>
+    </row>
+    <row _id="62" _uuid="CF43C671-945A-4F95-B27A-261DA1EECDAF" _position="62" _address="http://govfinder.socrata.com/resource/hwum-ssyq/62">
+      <city>New York</city>
+      <dataset_name>Dance Venues</dataset_name>
+      <url>https://data.cityofnewyork.us/Recreation/dance-venues/berx-iad2</url>
+      <api_url>http://data.cityofnewyork.us/resource/berx-iad2.json</api_url>
+      <isvalid>TRUE</isvalid>
+    </row>
+    <row _id="63" _uuid="05EF37A8-BD9E-40FD-BE62-0AA8B0EA8168" _position="63" _address="http://govfinder.socrata.com/resource/hwum-ssyq/63">
+      <city>New York</city>
+      <dataset_name>Latin Cultural Organizations</dataset_name>
+      <url>https://data.cityofnewyork.us/Recreation/Latin-Cultural-Organizations-Map/hv4a-s7jr</url>
+      <api_url>http://data.cityofnewyork.us/resource/hv4a-s7jr.json</api_url>
+      <isvalid>TRUE</isvalid>
+    </row>
+    <row _id="64" _uuid="E9034311-D0BC-4572-9B01-ECEC019F7529" _position="64" _address="http://govfinder.socrata.com/resource/hwum-ssyq/64">
+      <city>New York</city>
+      <dataset_name>Tracks</dataset_name>
+      <url>https://data.cityofnewyork.us/Housing-Development/Map-of-Tracks/4wxj-39k8</url>
+      <isvalid>TRUE</isvalid>
+    </row>
+    <row _id="65" _uuid="41CA034F-6059-4C0A-943E-99781D49D2E1" _position="65" _address="http://govfinder.socrata.com/resource/hwum-ssyq/65">
+      <city>New York</city>
+      <dataset_name>Golf Courses</dataset_name>
+      <url>https://data.cityofnewyork.us/Housing-Development/Map-of-Golf-Courses/8eaa-hwzm</url>
+      <isvalid>TRUE</isvalid>
+    </row>
+    <row _id="66" _uuid="D6779187-3581-4217-B8F1-F93B1E3B467B" _position="66" _address="http://govfinder.socrata.com/resource/hwum-ssyq/66">
+      <city>New York</city>
+      <dataset_name>Waterfront Parks</dataset_name>
+      <url>https://data.cityofnewyork.us/Recreation/NYC-Waterfront-Parks/i5th-f76j</url>
+      <isvalid>TRUE</isvalid>
+    </row>
+    <row _id="67" _uuid="3E5370A0-A44D-4CB3-B76A-4D792EF456A0" _position="67" _address="http://govfinder.socrata.com/resource/hwum-ssyq/67">
+      <city>New York</city>
+      <dataset_name>Multipurpose Fields</dataset_name>
+      <url>https://data.cityofnewyork.us/City-Government/Map-of-Multipurpose-Fields/hh48-sxf8</url>
+      <isvalid>TRUE</isvalid>
+    </row>
+    <row _id="68" _uuid="188C717E-7008-4405-9475-985F53F193DE" _position="68" _address="http://govfinder.socrata.com/resource/hwum-ssyq/68">
+      <city>New York</city>
+      <dataset_name>Cool Roofs</dataset_name>
+      <url>https://data.cityofnewyork.us/Environment/Cool-roofs/kvdm-5cy6</url>
+      <api_url>http://data.cityofnewyork.us/resource/kvdm-5cy6.json</api_url>
+      <isvalid>TRUE</isvalid>
+    </row>
+    <row _id="69" _uuid="6E7C1E4F-0191-4243-94F2-F92E57D9673D" _position="69" _address="http://govfinder.socrata.com/resource/hwum-ssyq/69">
+      <city>Edmonton</city>
+      <dataset_name>Public Schools (School Year2013 - 2014)</dataset_name>
+      <url>https://data.edmonton.ca/Education/Edmonton-Public-Schools-2013-2014-List-Map-View-/7yqh-39tz</url>
+      <api_url>http://data.edmonton.ca/resource/7yqh-39tz.json</api_url>
+      <isvalid>TRUE</isvalid>
+    </row>
+    <row _id="70" _uuid="67F756EF-EB4F-48EA-A82E-CA5A62F5CF98" _position="70" _address="http://govfinder.socrata.com/resource/hwum-ssyq/70">
+      <city>Edmonton</city>
+      <dataset_name>Playgrounds</dataset_name>
+      <url>https://data.edmonton.ca/Facilities-and-Structures/Playgrounds-Map-View/c4nr-3quz</url>
+      <api_url>http://data.edmonton.ca/resource/c4nr-3quz.json</api_url>
+      <isvalid>TRUE</isvalid>
+    </row>
+    <row _id="71" _uuid="8785ADE8-93A3-4443-BC57-2E49C7F1CB2B" _position="71" _address="http://govfinder.socrata.com/resource/hwum-ssyq/71">
+      <city>Edmonton</city>
+      <dataset_name>Tennis Courts</dataset_name>
+      <url>https://data.edmonton.ca/Facilities-and-Structures/Tennis-Courts-Map-View/25b5-e682</url>
+      <api_url>http://data.edmonton.ca/resource/25b5-e682.json</api_url>
+      <isvalid>TRUE</isvalid>
+    </row>
+    <row _id="72" _uuid="7E196E01-17A2-48FA-954D-4AAFD539DBD1" _position="72" _address="http://govfinder.socrata.com/resource/hwum-ssyq/72">
+      <city>Edmonton</city>
+      <dataset_name>Parkland</dataset_name>
+      <url>https://data.edmonton.ca/Facilities-and-Structures/Parkland-Map-View/bnuf-aarq</url>
+      <api_url>http://data.edmonton.ca/resource/bnuf-aarq.json</api_url>
+      <isvalid>TRUE</isvalid>
+    </row>
+    <row _id="73" _uuid="C5855641-EBED-45D8-AD2B-5597450F4166" _position="73" _address="http://govfinder.socrata.com/resource/hwum-ssyq/73">
+      <city>Edmonton</city>
+      <dataset_name>Fire Stations</dataset_name>
+      <url>https://data.edmonton.ca/Facilities-and-Structures/Fire-Stations-Map-View/7ndn-2x34</url>
+      <api_url>http://data.edmonton.ca/resource/7ndn-2x34.json</api_url>
+      <isvalid>TRUE</isvalid>
+    </row>
+    <row _id="74" _uuid="B329B8F2-6D61-4295-BE40-8C7A8D617215" _position="74" _address="http://govfinder.socrata.com/resource/hwum-ssyq/74">
+      <city>Edmonton</city>
+      <dataset_name>Wading Pools</dataset_name>
+      <url>https://data.edmonton.ca/Facilities-and-Structures/Wading-Pools-Map-View/mu9e-3mkm</url>
+      <api_url>http://data.edmonton.ca/resource/mu9e-3mkm.json</api_url>
+      <isvalid>TRUE</isvalid>
+    </row>
+    <row _id="75" _uuid="B940A4F8-EDC8-4B99-A23E-1BCF4193157A" _position="75" _address="http://govfinder.socrata.com/resource/hwum-ssyq/75">
+      <city>Edmonton</city>
+      <dataset_name>Community League Halls</dataset_name>
+      <url>https://data.edmonton.ca/Facilities-and-Structures/Community-League-Halls-Map-View/2d5a-esdr</url>
+      <api_url>http://data.edmonton.ca/resource/2d5a-esdr.json</api_url>
+      <isvalid>TRUE</isvalid>
+    </row>
+    <row _id="76" _uuid="AA76F088-126F-4880-98D3-52610AB0D381" _position="76" _address="http://govfinder.socrata.com/resource/hwum-ssyq/76">
+      <city>Edmonton</city>
+      <dataset_name>Golf Courses</dataset_name>
+      <url>https://data.edmonton.ca/Facilities-and-Structures/City-Golf-Courses-Map-View/ia7a-fuzq</url>
+      <api_url>http://data.edmonton.ca/resource/ia7a-fuzq.json</api_url>
+      <isvalid>TRUE</isvalid>
+    </row>
+    <row _id="77" _uuid="E736DF44-5952-47BE-91EE-E9E58FD5C639" _position="77" _address="http://govfinder.socrata.com/resource/hwum-ssyq/77">
+      <city>Edmonton</city>
+      <dataset_name>Recreation Centres</dataset_name>
+      <url>https://data.edmonton.ca/Facilities-and-Structures/Recreation-Centres-Map-View/punv-um3q</url>
+      <api_url>http://data.edmonton.ca/resource/punv-um3q.json</api_url>
+      <isvalid>TRUE</isvalid>
+    </row>
+    <row _id="78" _uuid="16B2CDA5-7D3F-458A-AE39-ED578016B863" _position="78" _address="http://govfinder.socrata.com/resource/hwum-ssyq/78">
+      <city>Edmonton</city>
+      <dataset_name>Sand Boxes</dataset_name>
+      <url>https://data.edmonton.ca/Transportation/Sandboxes-Map-View/62wr-c9ye</url>
+      <api_url>http://data.edmonton.ca/resource/62wr-c9ye.json</api_url>
+      <isvalid>TRUE</isvalid>
+    </row>
+    <row _id="79" _uuid="15C487F6-ABF4-44AC-BA87-6B9E3EE04C5F" _position="79" _address="http://govfinder.socrata.com/resource/hwum-ssyq/79">
+      <city>Edmonton</city>
+      <dataset_name>Police Stations</dataset_name>
+      <url>https://data.edmonton.ca/Facilities-and-Structures/Police-Stations-Map-View/7rap-ipwf</url>
+      <api_url>http://data.edmonton.ca/resource/7rap-ipwf.json</api_url>
+      <isvalid>TRUE</isvalid>
+    </row>
+    <row _id="80" _uuid="CBF56D8F-1347-44CD-8C4C-52FFF75CC6AF" _position="80" _address="http://govfinder.socrata.com/resource/hwum-ssyq/80">
+      <city>Edmonton</city>
+      <dataset_name>Baseball and Softball Diamonds</dataset_name>
+      <url>https://data.edmonton.ca/Facilities-and-Structures/Ball-Diamonds-Map-View/c7ev-7y4u</url>
+      <api_url>http://data.edmonton.ca/resource/c7ev-7y4u.json</api_url>
+      <isvalid>TRUE</isvalid>
+    </row>
+    <row _id="81" _uuid="0769D938-D84F-4007-AC15-BDAE13E23ADB" _position="81" _address="http://govfinder.socrata.com/resource/hwum-ssyq/81">
+      <city>Edmonton</city>
+      <dataset_name>Outdoor Swimming Pools</dataset_name>
+      <url>https://data.edmonton.ca/Facilities-and-Structures/Outdoor-Swimming-Pools-Map-View/kdc2-xufp</url>
+      <api_url>http://data.edmonton.ca/resource/kdc2-xufp.json</api_url>
+      <isvalid>TRUE</isvalid>
+    </row>
+    <row _id="82" _uuid="E9B6DC18-5148-4170-84C6-B2F977814AAC" _position="82" _address="http://govfinder.socrata.com/resource/hwum-ssyq/82">
+      <city>Edmonton</city>
+      <dataset_name>Track Sports Fields</dataset_name>
+      <url>https://data.edmonton.ca/Facilities-and-Structures/Track-Sports-Fields-Map-View/zh7a-ng4h</url>
+      <api_url>http://data.edmonton.ca/resource/zh7a-ng4h.json</api_url>
+      <isvalid>TRUE</isvalid>
+    </row>
+    <row _id="83" _uuid="1C462907-14FE-47B5-906D-26CB02B80923" _position="83" _address="http://govfinder.socrata.com/resource/hwum-ssyq/83">
+      <city>Edmonton</city>
+      <dataset_name>Cricket Fields</dataset_name>
+      <url>https://data.edmonton.ca/Facilities-and-Structures/Cricket-Fields-Map-View/yyj6-c972</url>
+      <api_url>http://data.edmonton.ca/resource/yyj6-c972.json</api_url>
+      <isvalid>TRUE</isvalid>
+    </row>
+    <row _id="84" _uuid="E2FEDB4C-5597-46D3-9BD2-EB305845BEE7" _position="84" _address="http://govfinder.socrata.com/resource/hwum-ssyq/84">
+      <city>Edmonton</city>
+      <dataset_name>Senior Centres</dataset_name>
+      <url>https://data.edmonton.ca/Facilities-and-Structures/Seniors-Centres-Map-View/8peh-czku</url>
+      <api_url>http://data.edmonton.ca/resource/8peh-czku.json</api_url>
+      <isvalid>TRUE</isvalid>
+    </row>
+    <row _id="85" _uuid="021EF811-87FF-4CC8-8E93-863D1EEAEA1C" _position="85" _address="http://govfinder.socrata.com/resource/hwum-ssyq/85">
+      <city>Edmonton</city>
+      <dataset_name>Mosquito Traps</dataset_name>
+      <url>https://data.edmonton.ca/Environmental-Services/Mosquitoes-Trap-Locations-Map-View/g2ht-buzt</url>
+      <api_url>http://data.edmonton.ca/resource/g2ht-buzt.json</api_url>
+      <isvalid>TRUE</isvalid>
+    </row>
+    <row _id="86" _uuid="31E25B0B-2BCC-4396-98A1-50E8E9530206" _position="86" _address="http://govfinder.socrata.com/resource/hwum-ssyq/86">
+      <city>Edmonton</city>
+      <dataset_name>Arenas</dataset_name>
+      <url>https://data.edmonton.ca/Facilities-and-Structures/Arenas-Map-View/mvki-i26q</url>
+      <api_url>http://data.edmonton.ca/resource/mvki-i26q.json</api_url>
+      <isvalid>TRUE</isvalid>
+    </row>
+    <row _id="87" _uuid="31BE4892-B8AD-42F2-A5CC-6117A37C1746" _position="87" _address="http://govfinder.socrata.com/resource/hwum-ssyq/87">
+      <city>Edmonton</city>
+      <dataset_name>Rugby Fields</dataset_name>
+      <url>https://data.edmonton.ca/Facilities-and-Structures/Rugby-Fields-Map-View/vbdj-jxmq</url>
+      <api_url>http://data.edmonton.ca/resource/vbdj-jxmq.json</api_url>
+      <isvalid>TRUE</isvalid>
+    </row>
+    <row _id="88" _uuid="C8A9E78E-197A-4769-B13E-E6C18A08E858" _position="88" _address="http://govfinder.socrata.com/resource/hwum-ssyq/88">
+      <city>Edmonton</city>
+      <dataset_name>Soccer Fields</dataset_name>
+      <url>https://data.edmonton.ca/Facilities-and-Structures/Soccer-Fields-Map-View/znrg-tr8s</url>
+      <api_url>http://data.edmonton.ca/resource/znrg-tr8s.json</api_url>
+      <isvalid>TRUE</isvalid>
+    </row>
+    <row _id="89" _uuid="534EF344-B82C-4CBA-B802-1B04500C5E3A" _position="89" _address="http://govfinder.socrata.com/resource/hwum-ssyq/89">
+      <city>Seattle</city>
+      <isvalid>TRUE</isvalid>
+    </row>
+
+</response>
+
+
+
+
+

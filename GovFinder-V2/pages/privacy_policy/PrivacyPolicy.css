@@ -1,0 +1,39 @@
+﻿
+#backgroundColor {
+    background-color: #756F6C;
+}
+
+h5 {
+    text-align: left;
+}
+
+.page-width {
+    width: 340px;
+}
+
+.pageBackground {
+    background-color: #39332E;
+}
+
+.fontColor {
+    color: white;
+    opacity: 0.5;
+}
+
+.backgroundButton {
+    color: black;
+    border-color: black;
+    opacity: 0.5;
+}
+
+@media screen and (-ms-view-state: fullscreen-landscape) {
+}
+
+@media screen and (-ms-view-state: filled) {
+}
+
+@media screen and (-ms-view-state: snapped) {
+}
+
+@media screen and (-ms-view-state: fullscreen-portrait) {
+}

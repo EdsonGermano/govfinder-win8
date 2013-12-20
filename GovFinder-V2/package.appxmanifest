@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Package xmlns="http://schemas.microsoft.com/appx/2010/manifest">
+  <Identity Name="7232851B.GovFinder" Version="2.0.0.19" Publisher="CN=1FB3B77B-C500-4486-AA94-B4190D0ADE70" />
+  <Properties>
+    <DisplayName>GovFinder</DisplayName>
+    <PublisherDisplayName>Socrata Inc.</PublisherDisplayName>
+    <Logo>images\storelogo.png</Logo>
+  </Properties>
+  <Prerequisites>
+    <OSMinVersion>6.2.1</OSMinVersion>
+    <OSMaxVersionTested>6.2.1</OSMaxVersionTested>
+  </Prerequisites>
+  <Resources>
+    <Resource Language="x-generate" />
+  </Resources>
+  <Applications>
+    <Application Id="App" StartPage="default.html">
+      <VisualElements DisplayName="GovFinder" Logo="images\w150.png" SmallLogo="images\w30.png" Description="Gov Finder" ForegroundText="light" BackgroundColor="#00c800" ToastCapable="false">
+        <LockScreen Notification="badgeAndTileText" BadgeLogo="images\bedgeLogo.png" />
+        <DefaultTile ShowName="allLogos" ShortName="Gov Finder" WideLogo="images\w310.png" />
+        <SplashScreen Image="images\splash.png" BackgroundColor="#746E6B" />
+        <InitialRotationPreference>
+          <Rotation Preference="landscape" />
+        </InitialRotationPreference>
+      </VisualElements>
+      <Extensions>
+        <Extension Category="windows.search" />
+        <Extension Category="windows.backgroundTasks" EntryPoint="GovFinderBackgroundTask.ScheduleTask">
+          <BackgroundTasks>
+            <Task Type="systemEvent" />
+            <Task Type="timer" />
+          </BackgroundTasks>
+        </Extension>
+      </Extensions>
+    </Application>
+  </Applications>
+  <Capabilities>
+    <Capability Name="internetClient" />
+    <DeviceCapability Name="location" />
+  </Capabilities>
+</Package>

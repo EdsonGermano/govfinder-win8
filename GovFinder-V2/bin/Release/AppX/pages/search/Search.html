@@ -1,0 +1,98 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <script src="/pages/search/Search.js"></script>
+    <script src="/js/data.js"></script>
+    <script src="/js/navigator.js"></script>
+
+    <link href="/css/default.css" rel="stylesheet" />
+    <link href="/pages/search/Search.css" rel="stylesheet" />
+  <!--  <link href="/searchResults.css" rel="stylesheet" />-->
+
+    <script src="/js/data.js"></script>
+
+</head>
+<body>
+    <div class="page-width pageBackground" data-win-control="WinJS.UI.SettingsFlyout" aria-label="Help settings flyout" data-win-options="{settingsCommandId:'search'}">
+
+        <!--Item template for search item-->
+        <div id="itemtemplate1" data-win-control="WinJS.Binding.Template">
+            <div style="float: left; text-align: left">
+                <img id="searchedImageCharm" class="item-image" src="#" data-win-bind="src: backgroundImage; alt: title" />
+            </div>
+            <div id="divTemplateCharm">
+                <h6 data-win-bind="innerHTML: title" style="font-family: 'Myfont';"></h6>
+                <table>
+                    <tr>
+                        <td>
+                            <img class="iconImage" src="/images/distance.png" /></td>
+                        <td>
+                            <h6 data-win-bind="innerText: distance" style="font-family: 'Myfont';"></h6>
+                        </td>
+                    </tr>
+                </table>
+                <table>
+                    <tr>
+                        <td>
+                            <img class="iconImage" src="/images/Phone.png" /></td>
+                        <td>
+                            <h6 data-win-bind="innerText: phone" style="font-family: 'Myfont';"></h6>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <!--Item template for category type-->
+        <div id="regularListIconTextTemplate1" data-win-control="WinJS.Binding.Template" style="display: none">
+            <div class="regularListIconTextItem1">
+                <img src="#" class="regularListIconTextItem1-Image" data-win-bind="src: backgroundImageSearch" />
+            </div>
+            <div class="regularListIconTextItem1-Detail">
+                <h6 data-win-bind="innerText: title" style="overflow: hidden; font-family: 'Myfont';"></h6>
+            </div>
+        </div>
+
+        <!--Top header -->
+        <div class="win-ui-dark win-header" id="backgroundColor">
+            <button type="button" onclick="WinJS.UI.SettingsFlyout.show()" class="win-backbutton backgroundButton"></button>
+            <div class="win-label">Search</div>
+        </div>
+
+        <table style="margin-left: 40px; margin-top: 10px">
+            <tr>
+                <td>
+                    <input id="searchText" style="width: 117%" type="search"/>
+
+                </td>
+                <td>
+                    <input id="getSearch" type="image" src="/images/SearchBackground.png" style="width: 1.7em; height: 1.7em; background-color: gray; margin-top: 4px; margin-left: 3px" />
+                </td>
+            </tr>
+        </table>
+
+        <!-- The content that will be loaded and displayed. -->
+
+        <section aria-label="Main content" role="main">
+            <div id="searchListCharm1" class="resultslist win-selectionstylefilled" aria-label="Search results" data-win-control="WinJS.UI.ListView" data-win-options="{ selectionMode: 'none',layout: { type: WinJS.UI.ListLayout }  }"></div>
+        </section>
+
+        <hr id="hrline"/>
+        <!--List of category type-->
+        <div id="listView1"
+            class="win-selectionstylefilled"
+            data-win-control="WinJS.UI.ListView"
+            data-win-options="{ 
+                selectionMode: 'multi', 
+                tapBehavior: 'toggleSelect', 
+                swipeBehavior: 'none', 
+                layout: { type: WinJS.UI.GridLayout } 
+            }">
+        </div>
+
+    </div>
+    <!-- ENDSETTINGSFLYOUT -->
+</body>
+</html>
+

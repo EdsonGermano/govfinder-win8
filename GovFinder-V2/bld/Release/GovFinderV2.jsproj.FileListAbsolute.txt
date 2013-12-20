@@ -1,0 +1,13 @@
+C:\Posh_TFS\POSH.Socrata\GovFinder-V2\bin\Release\resources.pri
+C:\Posh_TFS\POSH.Socrata\GovFinder-V2\bin\Release\AppxManifest.xml
+C:\Posh_TFS\POSH.Socrata\GovFinder-V2\bin\Release\GovFinderV2.build.appxrecipe
+C:\Posh_TFS\POSH.Socrata\GovFinder-V2\bld\Release\priconfig.xml
+C:\Posh_TFS\POSH.Socrata\GovFinder-V2\bld\Release\layout.resfiles
+C:\Posh_TFS\POSH.Socrata\GovFinder-V2\bld\Release\resources.resfiles
+C:\Posh_TFS\POSH.Socrata\GovFinder-V2\bld\Release\pri.resfiles
+C:\Posh_TFS\POSH.Socrata\GovFinder-V2\bld\Release\LanguageQualifiers.txt
+C:\Posh_TFS\POSH.Socrata\GovFinder-V2\bld\Release\ProjectArchitectures.txt
+C:\Posh_TFS\POSH.Socrata\GovFinder-V2\bin\Release\GovFinderBackgroundTask.winmd
+C:\Posh_TFS\POSH.Socrata\GovFinder-V2\bin\Release\GovFinderBackgroundTask.pdb
+C:\Posh_TFS\POSH.Socrata\GovFinder-V2\bin\Release\GovFinderBackgroundTask.pri
+C:\Posh_TFS\POSH.Socrata\GovFinder-V2\bld\Release\GovFinderV2.jsprojResolveAssemblyReference.cache

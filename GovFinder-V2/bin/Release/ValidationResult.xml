@@ -1,0 +1,756 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type='text/xsl' href='C:\ProgramData\Windows App Certification Kit\results.xsl'?>
+<REPORT OVERALL_RESULT="FAIL" VERSION="3.0" LATEST_VERSION="FALSE" UPDATE_DOWNLOAD_URL="http://go.microsoft.com/fwlink/?LinkID=246599&amp;amp;clcid=0x409" TOOLSET_ARCHITECTURE="X64" SecureBoot="FALSE" APP_TYPE="WindowsStore" PUBLISHER_DISPLAY_NAME="" OSVERSION="6.3.9600.0" OS="Microsoft Windows 8.1 Enterprise" PER_USER_APPLICATION="" PARTIAL_RUN="FALSE" LCID="1033" VALIDATION_TYPE="UI" ReportGenerationTime="11/7/2013 10:37:14 PM" ID="526d1dac23ee6feb42ed1faf94484fc2">
+  <REQUIREMENTS>
+    <REQUIREMENT NUMBER="1" TITLE="Clean reversible install test" RATIONALE="A clean, reversible, installation allows users to successfully manage (deploy, and remove) applications on their system." />
+    <REQUIREMENT NUMBER="2" TITLE="Install to the correct folders test" RATIONALE="Windows provides specific locations in the file system to store programs and software components, shared application data, and application data specific to a user." />
+    <REQUIREMENT NUMBER="3" TITLE="Digitally signed file test" RATIONALE="An Authenticode digital signature allows users to be sure that the software is genuine. It also allows detection if a file has been tampered with e.g. infected by a virus." />
+    <REQUIREMENT NUMBER="4" TITLE="Support x64 Windows test" RATIONALE="To maintain compatibility with 64-bit versions of Windows, it is necessary that applications should natively support 64-bit or at minimum 32-bit Windows based applications to run seamlessly on 64-bit." />
+    <REQUIREMENT NUMBER="5" TITLE="OS version checking test" RATIONALE="Applications must not perform version checks for equality (== 5.1). If you need a specific feature, check whether the feature is available. If you need Windows XP, check for Windows XP or later (&gt;= 5.1), This way, your detection code will continue to work on future versions of Windows. Driver installers and uninstall modules should never check the OS version." />
+    <REQUIREMENT NUMBER="6" TITLE="User account control (UAC) test" RATIONALE="Most applications do not require administrator privileges at run time, and should be just fine running as a standard-user. Windows applications must have a manifest (embedded or external) to define its execution level that tells OS the privileges needed to run the application." />
+    <REQUIREMENT NUMBER="7" TITLE="Adhere to system restart manager messages" RATIONALE="In a critical shutdown, applications that return FALSE to WM_QUERYENDSESSION will be sent WM_ENDSESSION and closed, while those that time out in response to WM_QUERYENDSESSION will be terminated." />
+    <REQUIREMENT NUMBER="8" TITLE="Safe mode test" RATIONALE="By default, most drivers and services that did not come preinstalled with Windows are not started in Safe Mode. They should remain disabled unless they are needed for basic operations of the system or for diagnostic and recovery purposes." />
+    <REQUIREMENT NUMBER="9" TITLE="Multiuser session test" RATIONALE="Windows users should be able to run concurrent sessions without conflict or disruption.  Applications must ensure that when running in multiple sessions either locally or remotely, the normal functionality of the application should not be impacted. Application settings and data files should not be persisted across users. A user’s privacy and preferences should be isolated to the user’s session." />
+    <REQUIREMENT NUMBER="10" TITLE="Crashes and hangs test" RATIONALE="Application failures such as crashes and hangs are a major disruption to users and cause frustration. Eliminating such failures improves application stability and reliability, and overall, provides users with a better application experience.">
+      <TEST INDEX="21" NAME="Crashes and hangs" DESCRIPTION="Do not crash or hang during the testing process." EXECUTIONTIME="00h:00m:05s.93ms">
+        <RESULT><![CDATA[PASS]]></RESULT>
+        <MESSAGES />
+      </TEST>
+    </REQUIREMENT>
+    <REQUIREMENT NUMBER="11" TITLE="Compatibility and resiliency test" RATIONALE="When Windows detects that an application has operated in an incompatible manner, it applies a compatibility fix that causes the application to behave correctly, ensuring a positive user experience. Applications should not rely on this behavior since it is only provided to allow legacy applications to work correctly on Windows." />
+    <REQUIREMENT NUMBER="12" TITLE="App manifest compliance test" RATIONALE="The package manifest was missing one or more required attributes." />
+    <REQUIREMENT NUMBER="13" TITLE="Windows security best practices test" RATIONALE="An application should not change the default Windows security settings." />
+    <REQUIREMENT NUMBER="14" TITLE="Windows security features test" RATIONALE="Applications must opt-into Windows security features.">
+      <TEST INDEX="33" NAME="Binary analyzer" DESCRIPTION="Analysis of security features enabled on binaries" EXECUTIONTIME="00h:00m:02s.63ms">
+        <RESULT><![CDATA[PASS]]></RESULT>
+        <MESSAGES />
+      </TEST>
+      <TEST INDEX="70" NAME="Banned file analyzer" DESCRIPTION="Analysis of application to detect known insecure files" EXECUTIONTIME="00h:00m:03s.35ms">
+        <RESULT><![CDATA[PASS]]></RESULT>
+        <MESSAGES />
+      </TEST>
+      <TEST INDEX="62" NAME="Private code signing" DESCRIPTION="App should not package private code signing key files." EXECUTIONTIME="00h:00m:08s.94ms">
+        <RESULT><![CDATA[PASS]]></RESULT>
+        <MESSAGES />
+      </TEST>
+    </REQUIREMENT>
+    <REQUIREMENT NUMBER="15" TITLE="Supported API test" RATIONALE="The application should only refer to the APIs allowed by the Windows SDK for Windows Store Apps." />
+    <REQUIREMENT NUMBER="17" TITLE="Performance test" RATIONALE="The application should have a fast and responsive launch and suspend experience while consuming a reasonable amount of system resources (CPU, File IO, Memory etc.) to enable fast switching and multitasking between previously unopened applications.">
+      <TEST INDEX="50" NAME="Bytecode generation" DESCRIPTION="Byte code generation should be able to complete successfully for packages containing an HTML5 Windows Store app." EXECUTIONTIME="00h:00m:06s.32ms">
+        <RESULT><![CDATA[PASS]]></RESULT>
+        <MESSAGES />
+      </TEST>
+      <TEST INDEX="60" NAME="Optimized binding references" DESCRIPTION="When using bindings, WinJS.Binding.optimizeBindingReferences should be set to true to optimize the memory usage." EXECUTIONTIME="00h:00m:09s.99ms">
+        <RESULT><![CDATA[PASS]]></RESULT>
+        <MESSAGES />
+      </TEST>
+      <TEST INDEX="43" NAME="Performance launch" DESCRIPTION="Application should have a responsive launch time with reasonable CPU, File IO and Memory usage" EXECUTIONTIME="00h:02m:35s.34ms">
+        <RESULT><![CDATA[PASS]]></RESULT>
+        <MESSAGES />
+      </TEST>
+      <TEST INDEX="44" NAME="Performance suspend" DESCRIPTION="Application should have a responsive suspend with reasonable CPU and File IO usage" EXECUTIONTIME="00h:02m:30s.77ms">
+        <RESULT><![CDATA[PASS]]></RESULT>
+        <MESSAGES />
+      </TEST>
+    </REQUIREMENT>
+    <REQUIREMENT NUMBER="19" TITLE="App manifest resources test" RATIONALE="The App Package Manifest should have valid resources defined in the resources.pri file, as per the App Packaging Specification and App Manifest Schema.">
+      <TEST INDEX="45" NAME="App resources validation" DESCRIPTION="The package should have valid resources defined in the resources.pri file." EXECUTIONTIME="00h:00m:00s.71ms">
+        <RESULT><![CDATA[FAIL]]></RESULT>
+        <MESSAGES>
+          <MESSAGE TEXT="Image reference &quot;images\bedgeLogo.png&quot;: The image &quot;C:\Program Files\WindowsApps\7232851B.GovFinder_2.0.0.18_neutral__hdxkza5ae1pwc\images\bedgeLogo.scale-100.png&quot; has an ABGR value &quot;0xFFEFEDFD&quot; at position (17, 3) that is not valid. The pixel must be white (##FFFFFF) or transparent (00######)." />
+        </MESSAGES>
+      </TEST>
+      <TEST INDEX="61" NAME="Branding validation" DESCRIPTION="App should not use the default images packed by windows SDK samples or Visual Studio." EXECUTIONTIME="00h:00m:10s.13ms">
+        <RESULT><![CDATA[PASS]]></RESULT>
+        <MESSAGES />
+      </TEST>
+    </REQUIREMENT>
+    <REQUIREMENT NUMBER="20" TITLE="Debug configuration test" RATIONALE="The App should not install any debug binaries.">
+      <TEST INDEX="46" NAME="Debug configuration" DESCRIPTION="The App should not install any debug binaries." EXECUTIONTIME="00h:00m:05s.89ms">
+        <RESULT><![CDATA[PASS]]></RESULT>
+        <MESSAGES />
+      </TEST>
+    </REQUIREMENT>
+    <REQUIREMENT NUMBER="21" TITLE="File encoding test" RATIONALE="Packages containing an HTML5 Windows Store app must have correct file encoding.">
+      <TEST INDEX="49" NAME="UTF-8 file encoding" DESCRIPTION="Packages containing an HTML5 Windows Store app must have correct file encoding." EXECUTIONTIME="00h:00m:06s.31ms">
+        <RESULT><![CDATA[PASS]]></RESULT>
+        <MESSAGES />
+      </TEST>
+    </REQUIREMENT>
+    <REQUIREMENT NUMBER="22" TITLE="Direct3D Feature Test" RATIONALE="App should use the Direct3D capability correctly.">
+      <TEST INDEX="51" NAME="Direct3D feature level support" DESCRIPTION="Applications must render content on Direct3D feature level 9.1 hardware." EXECUTIONTIME="00h:00m:00s.93ms">
+        <RESULT><![CDATA[PASS]]></RESULT>
+        <MESSAGES />
+      </TEST>
+      <TEST INDEX="71" NAME="Direct3D Trim after Suspend" DESCRIPTION="Applications must call IDXGIDevice3::Trim() on the Direct3D devices they create when handling a Suspend notification." EXECUTIONTIME="00h:00m:04s.26ms">
+        <RESULT><![CDATA[PASS]]></RESULT>
+        <MESSAGES />
+      </TEST>
+    </REQUIREMENT>
+    <REQUIREMENT NUMBER="23" TITLE="App Capabilities test" RATIONALE="Packages declaring special-use capabilities will have to provide justifications during the onboarding process.">
+      <TEST INDEX="52" NAME="Special use capabilities" DESCRIPTION="Packages declaring special-use capabilities will have to provide justifications during the onboarding process." EXECUTIONTIME="00h:00m:03s.66ms">
+        <RESULT><![CDATA[PASS]]></RESULT>
+        <MESSAGES />
+      </TEST>
+    </REQUIREMENT>
+    <REQUIREMENT NUMBER="24" TITLE="Windows Runtime metadata validation" RATIONALE="Metadata needs to be conformant and consistent across all generation sources.">
+      <TEST INDEX="56" NAME="ExclusiveTo attribute test" DESCRIPTION="A class must not implement an interface that is marked ExclusiveTo another class." EXECUTIONTIME="00h:00m:05s.37ms">
+        <RESULT><![CDATA[PASS]]></RESULT>
+        <MESSAGES />
+      </TEST>
+      <TEST INDEX="57" NAME="Type location test" DESCRIPTION="Types must be defined in the metadata file with the longest matching namespace." EXECUTIONTIME="00h:00m:03s.59ms">
+        <RESULT><![CDATA[PASS]]></RESULT>
+        <MESSAGES />
+      </TEST>
+      <TEST INDEX="55" NAME="Type name case-sensitivity test" DESCRIPTION="Namespace and type names must not vary only by casing." EXECUTIONTIME="00h:00m:03s.49ms">
+        <RESULT><![CDATA[PASS]]></RESULT>
+        <MESSAGES />
+      </TEST>
+      <TEST INDEX="54" NAME="Type name correctness test" DESCRIPTION="Only system types can be in the Windows namespace and no types can be in the global namespace." EXECUTIONTIME="00h:00m:03s.75ms">
+        <RESULT><![CDATA[PASS]]></RESULT>
+        <MESSAGES />
+      </TEST>
+      <TEST INDEX="58" NAME="General metadata correctness test" DESCRIPTION="Metadata files must meet various requirements in order to be valid and correct." EXECUTIONTIME="00h:00m:05s.37ms">
+        <RESULT><![CDATA[PASS]]></RESULT>
+        <MESSAGES />
+      </TEST>
+      <TEST INDEX="53" NAME="Properties test" DESCRIPTION="Write-only and indexer properties may not be used. Corresponding getter and setter methods must match in type." EXECUTIONTIME="00h:00m:03s.60ms">
+        <RESULT><![CDATA[PASS]]></RESULT>
+        <MESSAGES />
+      </TEST>
+    </REQUIREMENT>
+    <REQUIREMENT NUMBER="25" TITLE="Package sanity test" RATIONALE="Validation of the app package contents to ensure correctness.">
+      <TEST INDEX="63" NAME="Platform appropriate files" DESCRIPTION="App should not install files that do not match the target processor architecture." EXECUTIONTIME="00h:00m:10s.37ms">
+        <RESULT><![CDATA[PASS]]></RESULT>
+        <MESSAGES />
+      </TEST>
+      <TEST INDEX="66" NAME="Supported directory structure check" DESCRIPTION="Validate each file in the package for that the file name length should be less than MAX_PATH." EXECUTIONTIME="00h:00m:03s.10ms">
+        <RESULT><![CDATA[PASS]]></RESULT>
+        <MESSAGES />
+      </TEST>
+    </REQUIREMENT>
+    <REQUIREMENT NUMBER="26" TITLE="High-DPI support" RATIONALE="The application needs to set DPI-aware to make the UI look consistently good across a wide variety of high-DPI display settings." />
+    <REQUIREMENT NUMBER="27" TITLE="Resource Usage Test" RATIONALE="WinJS background tasks need to call close() to free resource.">
+      <TEST INDEX="68" NAME="WinJS background task test" DESCRIPTION="WinJS background tasks need to call close() to free resource." EXECUTIONTIME="00h:00m:10s.33ms">
+        <RESULT><![CDATA[PASS]]></RESULT>
+        <MESSAGES />
+      </TEST>
+    </REQUIREMENT>
+  </REQUIREMENTS>
+  <APPLICATIONS>
+    <Installed_Programs>
+      <Program Name="7232851B.GovFinder" Type="Application" Source="AppxPackage" Publisher="CN=1FB3B77B-C500-4486-AA94-B4190D0ADE70" Version="2.0.0.18" Language="1033" OnSystemDrive="true" RootDirPath="C:\Program Files\WindowsApps\7232851B.GovFinder_2.0.0.18_neutral__hdxkza5ae1pwc" PathEvidenceId="0xa" RNP="0x1" DNP="0xd" EvidenceId="0xa" Id="0000717a51d0760a0fa0c93d53c0eda6d01900000904">
+        <Indicators>
+          <DirectoryIndicators>
+            <Directory Name="js" Path="c:\program files\windowsapps\7232851b.govfinder_2.0.0.18_neutral__hdxkza5ae1pwc\bing.maps.javascript\js" RNP="0x9" DNP="0xb" UniqueId="0x23" Id="0000ed830a2cad918e620bb3cae846c3985ea8ddae26" />
+            <Directory Name="js" Path="c:\program files\windowsapps\7232851b.govfinder_2.0.0.18_neutral__hdxkza5ae1pwc\js" RNP="0x9" DNP="0xb" UniqueId="0x2e" Id="0000ed830a2cad918e620bb3cae846c3985ea8ddae26" />
+            <Directory Name="pages" Path="c:\program files\windowsapps\7232851b.govfinder_2.0.0.18_neutral__hdxkza5ae1pwc\pages" RNP="0x9" DNP="0xb" UniqueId="0x34" Id="000019ff601290dc13568ff4c70ea07fd47a73f13ab3" />
+            <Directory Name="comments" Path="c:\program files\windowsapps\7232851b.govfinder_2.0.0.18_neutral__hdxkza5ae1pwc\pages\comments" RNP="0x9" DNP="0xb" UniqueId="0x37" Id="0000a195f7a23870693d0648da5bb292a8d33df80381" />
+            <Directory Name="items" Path="c:\program files\windowsapps\7232851b.govfinder_2.0.0.18_neutral__hdxkza5ae1pwc\pages\items" RNP="0x9" DNP="0xb" UniqueId="0x3d" Id="0000a5e00883c4da105ab6e90c6ac225b531b9ceb7aa" />
+            <Directory Name="mapview" Path="c:\program files\windowsapps\7232851b.govfinder_2.0.0.18_neutral__hdxkza5ae1pwc\pages\mapview" RNP="0x9" DNP="0xb" UniqueId="0x40" Id="0000a55ccc51b61d6f4c837534451a4bb158bc59d440" />
+            <Directory Name="about" Path="c:\program files\windowsapps\7232851b.govfinder_2.0.0.18_neutral__hdxkza5ae1pwc\pages\about" RNP="0x9" DNP="0xb" UniqueId="0x35" Id="000095a89a47482232b8213a02fc7ed3162546ee0da4" />
+            <Directory Name="bing.maps.javascript" Path="c:\program files\windowsapps\7232851b.govfinder_2.0.0.18_neutral__hdxkza5ae1pwc\bing.maps.javascript" RNP="0x9" DNP="0xb" UniqueId="0x12" Id="00006a1a97684a506bf977ba006a3130c26493df5df7" />
+            <Directory Name="fullsearch" Path="c:\program files\windowsapps\7232851b.govfinder_2.0.0.18_neutral__hdxkza5ae1pwc\pages\fullsearch" RNP="0x9" DNP="0xb" UniqueId="0x3a" Id="0000ef3f792417b0d64afd6e4a9f0a171befb4748827" />
+            <Directory Name="privacy_policy" Path="c:\program files\windowsapps\7232851b.govfinder_2.0.0.18_neutral__hdxkza5ae1pwc\pages\privacy_policy" RNP="0x9" DNP="0xb" UniqueId="0x43" Id="00000dc65aff55828d189ef0fabcbb08a385f7c03eb6" />
+            <Directory Name="search" Path="c:\program files\windowsapps\7232851b.govfinder_2.0.0.18_neutral__hdxkza5ae1pwc\pages\search" RNP="0x9" DNP="0xb" UniqueId="0x45" Id="00005baf6023754dd66911dda566ec62e76f13623490" />
+            <Directory Name="7232851b.govfinder_2.0.0.18_neutral__hdxkza5ae1pwc" Path="c:\program files\windowsapps\7232851b.govfinder_2.0.0.18_neutral__hdxkza5ae1pwc" RNP="0x9" DNP="0xb" UniqueId="0xb" Id="0000dd2540842010702c8c18be3f502ddd3d3b040887" />
+            <Directory Name="split" Path="c:\program files\windowsapps\7232851b.govfinder_2.0.0.18_neutral__hdxkza5ae1pwc\pages\split" RNP="0x9" DNP="0xb" UniqueId="0x48" Id="0000987ef17dd8322d55d9fba3f9a88ba6b24cb8d293" />
+          </DirectoryIndicators>
+          <WindowsStoreAppManifestIndicators>
+            <PackageManifest PackageFullName="7232851b.govfinder_2.0.0.18_neutral__hdxkza5ae1pwc">
+              <Package xmlns="http://schemas.microsoft.com/appx/2010/manifest" xmlns:build="http://schemas.microsoft.com/developer/appx/2012/build">
+                <Identity Name="7232851B.GovFinder" Version="2.0.0.18" Publisher="CN=1FB3B77B-C500-4486-AA94-B4190D0ADE70" ProcessorArchitecture="neutral" />
+                <Properties>
+                  <DisplayName>GovFinder</DisplayName>
+                  <PublisherDisplayName>Socrata Inc.</PublisherDisplayName>
+                  <Logo>images\storelogo.png</Logo>
+                </Properties>
+                <Prerequisites>
+                  <OSMinVersion>6.2.1</OSMinVersion>
+                  <OSMaxVersionTested>6.2.1</OSMaxVersionTested>
+                </Prerequisites>
+                <Resources>
+                  <Resource Language="EN-US" />
+                </Resources>
+                <Applications>
+                  <Application Id="App" StartPage="default.html">
+                    <VisualElements DisplayName="GovFinder" Logo="images\w150.png" SmallLogo="images\w30.png" Description="Gov Finder" ForegroundText="light" BackgroundColor="#00c800" ToastCapable="false">
+                      <LockScreen Notification="badgeAndTileText" BadgeLogo="images\bedgeLogo.png" />
+                      <DefaultTile ShowName="allLogos" ShortName="Gov Finder" WideLogo="images\w310.png" />
+                      <SplashScreen Image="images\splash.png" BackgroundColor="#746E6B" />
+                      <InitialRotationPreference>
+                        <Rotation Preference="landscape" />
+                      </InitialRotationPreference>
+                    </VisualElements>
+                    <Extensions>
+                      <Extension Category="windows.search" />
+                      <Extension Category="windows.backgroundTasks" EntryPoint="GovFinderBackgroundTask.ScheduleTask">
+                        <BackgroundTasks>
+                          <Task Type="systemEvent" />
+                          <Task Type="timer" />
+                        </BackgroundTasks>
+                      </Extension>
+                    </Extensions>
+                  </Application>
+                </Applications>
+                <Capabilities>
+                  <Capability Name="internetClient" />
+                  <DeviceCapability Name="location" />
+                </Capabilities>
+                <Dependencies>
+                  <PackageDependency Name="Microsoft.WinJS.1.0" MinVersion="1.0.9200.20789" />
+                </Dependencies>
+                <Extensions>
+                  <Extension Category="windows.activatableClass.inProcessServer">
+                    <InProcessServer>
+                      <Path>CLRHost.dll</Path>
+                      <ActivatableClass ActivatableClassId="GovFinderBackgroundTask.ScheduleTask" ThreadingModel="both" />
+                    </InProcessServer>
+                  </Extension>
+                </Extensions>
+              </Package>
+            </PackageManifest>
+          </WindowsStoreAppManifestIndicators>
+        </Indicators>
+        <StaticProperties>
+          <Files Id="0000170a7d0bd6ffcdd1334912516d85bf649bf759f6">
+            <File Name="default.html" Id="0000e89232a6390e454789f192acf29cf1709e9c0833" ShortName="DEFAUL~1.HTM" Size="0x267a" BinaryType="UNKNOWN" Created="11/08/2013 06:31:18" Modified="11/08/2013 06:31:18" Path="c:\program files\windowsapps\7232851b.govfinder_2.0.0.18_neutral__hdxkza5ae1pwc" RNP="0xa" DNP="0x9" LowerCaseLongPath="c:\program files\windowsapps\7232851b.govfinder_2.0.0.18_neutral__hdxkza5ae1pwc\default.html" LongPathHash="0000e9c9e1fe00655ad3fc9500bac3705b1d6e763a57" UniqueId="0xc" />
+            <File Name="resources.pri" Id="0000a56e6b5042b2f49d90661778412ebd1307ce1727" ShortName="RESOUR~1.PRI" Size="0xe3198" BinaryType="UNKNOWN" Created="11/08/2013 06:31:18" Modified="11/08/2013 06:31:19" Path="c:\program files\windowsapps\7232851b.govfinder_2.0.0.18_neutral__hdxkza5ae1pwc" RNP="0xa" DNP="0x9" LowerCaseLongPath="c:\program files\windowsapps\7232851b.govfinder_2.0.0.18_neutral__hdxkza5ae1pwc\resources.pri" LongPathHash="000036791522e55600c4c137915a89a1fc2dcd4e315a" UniqueId="0xe" />
+            <File Name="searchResults.html" Id="0000a6565600c65688692aff300feddddc7f0402d698" ShortName="SEARCH~1.HTM" Size="0x9b7" BinaryType="UNKNOWN" Created="11/08/2013 06:31:18" Modified="11/08/2013 06:31:19" Path="c:\program files\windowsapps\7232851b.govfinder_2.0.0.18_neutral__hdxkza5ae1pwc" RNP="0xa" DNP="0x9" LowerCaseLongPath="c:\program files\windowsapps\7232851b.govfinder_2.0.0.18_neutral__hdxkza5ae1pwc\searchresults.html" LongPathHash="00007d8307b0fe7d1b225a70a952cf699a2cd77e495b" UniqueId="0xf" />
+            <File Name="navigator.js" Id="00001ed04bbe3daf1223648e4faf6af1b6e357bfb9c4" ShortName="NAVIGA~1.JS" Size="0x1928" BinaryType="UNKNOWN" Created="11/08/2013 06:31:18" Modified="11/08/2013 06:31:18" Path="c:\program files\windowsapps\7232851b.govfinder_2.0.0.18_neutral__hdxkza5ae1pwc\js" RNP="0xa" DNP="0x9" LowerCaseLongPath="c:\program files\windowsapps\7232851b.govfinder_2.0.0.18_neutral__hdxkza5ae1pwc\js\navigator.js" LongPathHash="00002552b35642e1a5461400fd5cb1cd6b2f280881c2" UniqueId="0x31" />
+            <File Name="searchResults.js" Id="00008d7b5e6694f1527da44fcf6cbd010936d6ca580f" ShortName="SEARCH~1.JS" Size="0x2cee" BinaryType="UNKNOWN" Created="11/08/2013 06:31:18" Modified="11/08/2013 06:31:19" Path="c:\program files\windowsapps\7232851b.govfinder_2.0.0.18_neutral__hdxkza5ae1pwc" RNP="0xa" DNP="0x9" LowerCaseLongPath="c:\program files\windowsapps\7232851b.govfinder_2.0.0.18_neutral__hdxkza5ae1pwc\searchresults.js" LongPathHash="0000d924550c0163c065f04d5bf3416c88f68055ac02" UniqueId="0x10" />
+            <File Name="about_us.html" Id="00003f88db238d773c9f8daf58e79b113ca02c2fc0bb" ShortName="ABOUT_~1.HTM" Size="0xcbf" BinaryType="UNKNOWN" Created="11/08/2013 06:31:18" Modified="11/08/2013 06:31:18" Path="c:\program files\windowsapps\7232851b.govfinder_2.0.0.18_neutral__hdxkza5ae1pwc\pages\about" RNP="0xa" DNP="0x9" LowerCaseLongPath="c:\program files\windowsapps\7232851b.govfinder_2.0.0.18_neutral__hdxkza5ae1pwc\pages\about\about_us.html" LongPathHash="0000e8d0a308e316b5e1a87877d1634ff7eefba57a1c" UniqueId="0x36" />
+            <File Name="veapicore.js" Id="0000655977942225dfcbbac05b9e6ec3df3bc6629067" ShortName="VEAPIC~1.JS" Size="0x49a50" BinaryType="UNKNOWN" Created="11/08/2013 06:31:18" Modified="11/08/2013 06:31:18" Path="c:\program files\windowsapps\7232851b.govfinder_2.0.0.18_neutral__hdxkza5ae1pwc\bing.maps.javascript\js" RNP="0xa" DNP="0x9" LowerCaseLongPath="c:\program files\windowsapps\7232851b.govfinder_2.0.0.18_neutral__hdxkza5ae1pwc\bing.maps.javascript\js\veapicore.js" LongPathHash="00005ebee476a4220e95215519ac778746f21c3e18e0" UniqueId="0x24" />
+            <File Name="veapiModules.js" Id="000009288bfbb547605a65d6024020995632f712d7f1" ShortName="VEAPIM~1.JS" Size="0x40de5" BinaryType="UNKNOWN" Created="11/08/2013 06:31:18" Modified="11/08/2013 06:31:18" Path="c:\program files\windowsapps\7232851b.govfinder_2.0.0.18_neutral__hdxkza5ae1pwc\bing.maps.javascript\js" RNP="0xa" DNP="0x9" LowerCaseLongPath="c:\program files\windowsapps\7232851b.govfinder_2.0.0.18_neutral__hdxkza5ae1pwc\bing.maps.javascript\js\veapimodules.js" LongPathHash="0000551d431fccd0da95dac15387e98940febb6c1109" UniqueId="0x25" />
+            <File Name="GovFinderBackgroundTask.winmd" Id="0000facca3537867acdc9180f7ee9298a36dadd68504" ProductName="GovFinderBackgroundTask" CompanyName="Hewlett-Packard" ProductVersion="1.0.0.0" VerLanguage="0" ShortName="GOVFIN~1.WIN" SwitchBackContext="0x0100000000000602" FileVersion="1.0.0.0" Size="0x2400" SizeOfImage="0x8000" PeHeaderHash="01017eca3d5b68c6260103c72bdbecd89ef09a32c6d6" PeChecksum="0x0" PeImageType="0x14c" PeSubsystem="3" BinProductVersion="1.0.0.0" BinFileVersion="1.0.0.0" FileDescription="GovFinderBackgroundTask" InternalName="GovFinderBackgroundTask.winmdobj" LegalCopyright="Copyright © Hewlett-Packard 2013" LinkerVersion="11.0" LinkDate="11/08/2013 06:22:42" BinaryType="DOTNETIL" Created="11/08/2013 06:31:18" Modified="11/08/2013 06:31:18" OriginalFilename="GovFinderBackgroundTask.winmdobj" Path="c:\program files\windowsapps\7232851b.govfinder_2.0.0.18_neutral__hdxkza5ae1pwc" RNP="0x4" DNP="0x5" LowerCaseLongPath="c:\program files\windowsapps\7232851b.govfinder_2.0.0.18_neutral__hdxkza5ae1pwc\govfinderbackgroundtask.winmd" LongPathHash="0000aeafaffc154605a2d9ac7412b195dbcb822316f6" UniqueId="0xd" />
+            <File Name="data.js" Id="00003b66ce63309bed92e52531111928832d0179e432" Size="0x7de" BinaryType="UNKNOWN" Created="11/08/2013 06:31:18" Modified="11/08/2013 06:31:18" Path="c:\program files\windowsapps\7232851b.govfinder_2.0.0.18_neutral__hdxkza5ae1pwc\js" RNP="0xa" DNP="0x9" LowerCaseLongPath="c:\program files\windowsapps\7232851b.govfinder_2.0.0.18_neutral__hdxkza5ae1pwc\js\data.js" LongPathHash="000050f7a358b1a51ec889dd9cf6afe862593aa95609" UniqueId="0x2f" />
+            <File Name="default.js" Id="00006ff0b869fd0c0dce267430512069a033df2e7dc6" Size="0x15cf4" BinaryType="UNKNOWN" Created="11/08/2013 06:31:18" Modified="11/08/2013 06:31:18" Path="c:\program files\windowsapps\7232851b.govfinder_2.0.0.18_neutral__hdxkza5ae1pwc\js" RNP="0xa" DNP="0x9" LowerCaseLongPath="c:\program files\windowsapps\7232851b.govfinder_2.0.0.18_neutral__hdxkza5ae1pwc\js\default.js" LongPathHash="000085f6b0e25a326ef10046c17c492d1a3f61a54e2f" UniqueId="0x30" />
+            <File Name="PrivacyPolicy.html" Id="0000f0655a5f4b035f931edc97ae60951b1434e178b2" ShortName="PRIVAC~1.HTM" Size="0x412e" BinaryType="UNKNOWN" Created="11/08/2013 06:31:18" Modified="11/08/2013 06:31:19" Path="c:\program files\windowsapps\7232851b.govfinder_2.0.0.18_neutral__hdxkza5ae1pwc\pages\privacy_policy" RNP="0xa" DNP="0x9" LowerCaseLongPath="c:\program files\windowsapps\7232851b.govfinder_2.0.0.18_neutral__hdxkza5ae1pwc\pages\privacy_policy\privacypolicy.html" LongPathHash="000069f07682f48d1eca036dd361c147cb240db6120e" UniqueId="0x44" />
+            <File Name="items.js" Id="00001f7a620fb26e68aa3619ac8a8fe88de2fcfbdc32" Size="0x3541" BinaryType="UNKNOWN" Created="11/08/2013 06:31:18" Modified="11/08/2013 06:31:19" Path="c:\program files\windowsapps\7232851b.govfinder_2.0.0.18_neutral__hdxkza5ae1pwc\pages\items" RNP="0xa" DNP="0x9" LowerCaseLongPath="c:\program files\windowsapps\7232851b.govfinder_2.0.0.18_neutral__hdxkza5ae1pwc\pages\items\items.js" LongPathHash="0000b132d57272b672bf8303892f42007793eab288bd" UniqueId="0x3f" />
+            <File Name="map.html" Id="000089919a448436baa473806c7e1e1b2f1d818cb6d5" ShortName="MAP~1.HTM" Size="0x8e3" BinaryType="UNKNOWN" Created="11/08/2013 06:31:18" Modified="11/08/2013 06:31:19" Path="c:\program files\windowsapps\7232851b.govfinder_2.0.0.18_neutral__hdxkza5ae1pwc\pages\mapview" RNP="0xa" DNP="0x9" LowerCaseLongPath="c:\program files\windowsapps\7232851b.govfinder_2.0.0.18_neutral__hdxkza5ae1pwc\pages\mapview\map.html" LongPathHash="000045aedb5c9fed979fae6482c2b7acc829b0ecbf31" UniqueId="0x41" />
+            <File Name="Search.html" Id="00002cb7cc0937ca8096359f5918ebe57930f56300e9" ShortName="SEARCH~1.HTM" Size="0x1000" BinaryType="UNKNOWN" Created="11/08/2013 06:31:18" Modified="11/08/2013 06:31:19" Path="c:\program files\windowsapps\7232851b.govfinder_2.0.0.18_neutral__hdxkza5ae1pwc\pages\search" RNP="0xa" DNP="0x9" LowerCaseLongPath="c:\program files\windowsapps\7232851b.govfinder_2.0.0.18_neutral__hdxkza5ae1pwc\pages\search\search.html" LongPathHash="0000453176d6bf0c1e66dfc5979fae49afe0dc9f4d4b" UniqueId="0x46" />
+            <File Name="Comments.html" Id="0000fc596c240b7d9b25410463b6e7b3e7cce7164867" ShortName="COMMEN~1.HTM" Size="0xeed" BinaryType="UNKNOWN" Created="11/08/2013 06:31:18" Modified="11/08/2013 06:31:18" Path="c:\program files\windowsapps\7232851b.govfinder_2.0.0.18_neutral__hdxkza5ae1pwc\pages\comments" RNP="0xa" DNP="0x9" LowerCaseLongPath="c:\program files\windowsapps\7232851b.govfinder_2.0.0.18_neutral__hdxkza5ae1pwc\pages\comments\comments.html" LongPathHash="00000a98fab02cdd13dfea17aee4064a18b7940a363e" UniqueId="0x38" />
+            <File Name="fullSearch.html" Id="00003faad7b58828c12c6144b7e1b5db2e29f4fb33a4" ShortName="FULLSE~1.HTM" Size="0x1898" BinaryType="UNKNOWN" Created="11/08/2013 06:31:18" Modified="11/08/2013 06:31:19" Path="c:\program files\windowsapps\7232851b.govfinder_2.0.0.18_neutral__hdxkza5ae1pwc\pages\fullsearch" RNP="0xa" DNP="0x9" LowerCaseLongPath="c:\program files\windowsapps\7232851b.govfinder_2.0.0.18_neutral__hdxkza5ae1pwc\pages\fullsearch\fullsearch.html" LongPathHash="000020bc227de2204e031c37dc9c3ee14c5eecb9f49e" UniqueId="0x3b" />
+            <File Name="Comments.js" Id="0000c8c1b6dccd381428391510b2cdf90f943a909315" Size="0x2d3f" BinaryType="UNKNOWN" Created="11/08/2013 06:31:18" Modified="11/08/2013 06:31:18" Path="c:\program files\windowsapps\7232851b.govfinder_2.0.0.18_neutral__hdxkza5ae1pwc\pages\comments" RNP="0xa" DNP="0x9" LowerCaseLongPath="c:\program files\windowsapps\7232851b.govfinder_2.0.0.18_neutral__hdxkza5ae1pwc\pages\comments\comments.js" LongPathHash="0000f68a3abd78a142a27bab33341e1c80cf5e03f330" UniqueId="0x39" />
+            <File Name="Search.js" Id="00008cc112653630336a38e3cec4a2105d568cd6bb24" Size="0x1991" BinaryType="UNKNOWN" Created="11/08/2013 06:31:18" Modified="11/08/2013 06:31:19" Path="c:\program files\windowsapps\7232851b.govfinder_2.0.0.18_neutral__hdxkza5ae1pwc\pages\search" RNP="0xa" DNP="0x9" LowerCaseLongPath="c:\program files\windowsapps\7232851b.govfinder_2.0.0.18_neutral__hdxkza5ae1pwc\pages\search\search.js" LongPathHash="0000d2efd20c286a346e8dba525a2fbc44ba9db9f34d" UniqueId="0x47" />
+            <File Name="map.js" Id="00004cb14634c939783e7a1b52e19ae7fc76591004d2" Size="0x15eb" BinaryType="UNKNOWN" Created="11/08/2013 06:31:18" Modified="11/08/2013 06:31:19" Path="c:\program files\windowsapps\7232851b.govfinder_2.0.0.18_neutral__hdxkza5ae1pwc\pages\mapview" RNP="0xa" DNP="0x9" LowerCaseLongPath="c:\program files\windowsapps\7232851b.govfinder_2.0.0.18_neutral__hdxkza5ae1pwc\pages\mapview\map.js" LongPathHash="0000c5eb9808a1655bfe2242a2f1bdbd2cb24eea1b40" UniqueId="0x42" />
+            <File Name="items.html" Id="0000b529449747103e9760d367fe91e928dd65c356ab" ShortName="ITEMS~1.HTM" Size="0xe00" BinaryType="UNKNOWN" Created="11/08/2013 06:31:18" Modified="11/08/2013 06:31:19" Path="c:\program files\windowsapps\7232851b.govfinder_2.0.0.18_neutral__hdxkza5ae1pwc\pages\items" RNP="0xa" DNP="0x9" LowerCaseLongPath="c:\program files\windowsapps\7232851b.govfinder_2.0.0.18_neutral__hdxkza5ae1pwc\pages\items\items.html" LongPathHash="0000c348b0c851f3e44946ce63b5759b501f32304ec6" UniqueId="0x3e" />
+            <File Name="fullSearch.js" Id="0000993c5ae6c8ac643e964e1da7011381de1a6ce5df" ShortName="FULLSE~1.JS" Size="0x2550" BinaryType="UNKNOWN" Created="11/08/2013 06:31:18" Modified="11/08/2013 06:31:19" Path="c:\program files\windowsapps\7232851b.govfinder_2.0.0.18_neutral__hdxkza5ae1pwc\pages\fullsearch" RNP="0xa" DNP="0x9" LowerCaseLongPath="c:\program files\windowsapps\7232851b.govfinder_2.0.0.18_neutral__hdxkza5ae1pwc\pages\fullsearch\fullsearch.js" LongPathHash="00007aabd4e1ce53eca3169b4740159db2ffedd4fbe4" UniqueId="0x3c" />
+            <File Name="split.js" Id="0000c3201b1bedfab7d811d4ec151dde6683ceff65fa" Size="0x7c0b" BinaryType="UNKNOWN" Created="11/08/2013 06:31:18" Modified="11/08/2013 06:31:19" Path="c:\program files\windowsapps\7232851b.govfinder_2.0.0.18_neutral__hdxkza5ae1pwc\pages\split" RNP="0xa" DNP="0x9" LowerCaseLongPath="c:\program files\windowsapps\7232851b.govfinder_2.0.0.18_neutral__hdxkza5ae1pwc\pages\split\split.js" LongPathHash="0000929a8a54dec9cd60cfa1fd4026131e29e22d4d52" UniqueId="0x4a" />
+            <File Name="split.html" Id="0000554f31ef2d59368925e71035758e59f1830aa5b8" ShortName="SPLIT~1.HTM" Size="0x22f1" BinaryType="UNKNOWN" Created="11/08/2013 06:31:18" Modified="11/08/2013 06:31:19" Path="c:\program files\windowsapps\7232851b.govfinder_2.0.0.18_neutral__hdxkza5ae1pwc\pages\split" RNP="0xa" DNP="0x9" LowerCaseLongPath="c:\program files\windowsapps\7232851b.govfinder_2.0.0.18_neutral__hdxkza5ae1pwc\pages\split\split.html" LongPathHash="00009ea7bc052d5a96703710dfb2450176d0e7b0ed4b" UniqueId="0x49" />
+          </Files>
+        </StaticProperties>
+      </Program>
+    </Installed_Programs>
+  </APPLICATIONS>
+  <DEPENDENCY_INFORMATION>
+    <AitStaticAnalysis ProgramId="0000717a51d0760a0fa0c93d53c0eda6d01900000904" AnalysisVersion="1.59" DictionaryVersion="2.11" Type="Package" Id="7232851B.GovFinder_2.0.0.18_neutral__hdxkza5ae1pwc">
+      <AitFile ErrorCode="0" Name="veapiModules.js" Id="000009288bfbb547605a65d6024020995632f712d7f1">
+        <AitCategory Id="WRTJavaScript">
+          <AitFeature Name="MSApp.execUnsafeLocalFunction" />
+          <AitFeature Name="Windows.ApplicationModel.Resources.Core.ResourceManager.current.defaultContext.languages" />
+          <AitFeature Name="document" />
+          <AitFeature Name="document.body" />
+          <AitFeature Name="document.body.appendChild" />
+          <AitFeature Name="document.body.removeChild" />
+          <AitFeature Name="document.createElement" />
+          <AitFeature Name="document.createTextNode" />
+          <AitFeature Name="document.documentElement" />
+          <AitFeature Name="document.getElementById" />
+          <AitFeature Name="location" />
+          <AitFeature Name="window" />
+          <AitFeature Name="window." />
+          <AitFeature Name="window.ActiveXObject" />
+          <AitFeature Name="window.Sys" />
+          <AitFeature Name="window.Sys.UI" />
+          <AitFeature Name="window.Sys.UI.Behavior" />
+          <AitFeature Name="window.clearInterval" />
+          <AitFeature Name="window.clearTimeout" />
+          <AitFeature Name="window.document" />
+          <AitFeature Name="window.location.search" />
+          <AitFeature Name="window.location.search.substr" />
+          <AitFeature Name="window.open" />
+          <AitFeature Name="window.self" />
+          <AitFeature Name="window.setInterval" />
+          <AitFeature Name="window.setTimeout" />
+        </AitCategory>
+      </AitFile>
+      <AitFile ErrorCode="0" Name="navigator.js" Id="00001ed04bbe3daf1223648e4faf6af1b6e357bfb9c4">
+        <AitCategory Id="WRTJavaScript">
+          <AitFeature Name="WinJS.Class.define" />
+          <AitFeature Name="WinJS.Namespace.define" />
+          <AitFeature Name="WinJS.Navigation" />
+          <AitFeature Name="WinJS.Promise" />
+          <AitFeature Name="WinJS.Promise.as" />
+          <AitFeature Name="WinJS.Promise.timeout" />
+          <AitFeature Name="WinJS.UI.Animation.enterPage" />
+          <AitFeature Name="WinJS.UI.Pages.render" />
+          <AitFeature Name="Windows.UI.ViewManagement.ApplicationView" />
+          <AitFeature Name="document.body.onkeypress" />
+          <AitFeature Name="document.body.onkeyup" />
+          <AitFeature Name="document.body.onmspointerup" />
+          <AitFeature Name="document.createElement" />
+          <AitFeature Name="window.getComputedStyle" />
+          <AitFeature Name="window.onresize" />
+        </AitCategory>
+      </AitFile>
+      <AitFile ErrorCode="0" Name="items.js" Id="00001f7a620fb26e68aa3619ac8a8fe88de2fcfbdc32">
+        <AitCategory Id="WRTJavaScript">
+          <AitFeature Name="WinJS.Application.onsettings" />
+          <AitFeature Name="WinJS.Binding.List" />
+          <AitFeature Name="WinJS.Navigation.navigate" />
+          <AitFeature Name="WinJS.Promise.timeout" />
+          <AitFeature Name="WinJS.UI" />
+          <AitFeature Name="WinJS.UI.SettingsFlyout.populateSettings" />
+          <AitFeature Name="WinJS.UI.SettingsFlyout.showSettings" />
+          <AitFeature Name="Windows.ApplicationModel.Background.BackgroundExecutionManager.requestAccessAsync" />
+          <AitFeature Name="Windows.ApplicationModel.Background.BackgroundTaskBuilder" />
+          <AitFeature Name="Windows.ApplicationModel.Background.BackgroundTaskRegistration.allTasks.first" />
+          <AitFeature Name="Windows.ApplicationModel.Background.TimeTrigger" />
+          <AitFeature Name="Windows.Storage.ApplicationData.current.localSettings" />
+          <AitFeature Name="Windows.UI.Popups.MessageDialog" />
+          <AitFeature Name="Windows.UI.ViewManagement.ApplicationView.value" />
+          <AitFeature Name="Windows.UI.ViewManagement.ApplicationViewState" />
+          <AitFeature Name="document.createElement" />
+          <AitFeature Name="document.getElementById" />
+        </AitCategory>
+      </AitFile>
+      <AitFile ErrorCode="0" Name="Search.html" Id="00002cb7cc0937ca8096359f5918ebe57930f56300e9">
+        <AitCategory Id="WRTJavaScript">
+          <AitFeature Name="WinJS.Binding.Template" />
+          <AitFeature Name="WinJS.UI.GridLayout" />
+          <AitFeature Name="WinJS.UI.ListLayout" />
+          <AitFeature Name="WinJS.UI.ListView" />
+          <AitFeature Name="WinJS.UI.SettingsFlyout" />
+          <AitFeature Name="WinJS.UI.SettingsFlyout.show" />
+          <AitFeature Name="navigator.js" />
+        </AitCategory>
+      </AitFile>
+      <AitFile ErrorCode="0" Name="data.js" Id="00003b66ce63309bed92e52531111928832d0179e432">
+        <AitCategory Id="WRTJavaScript">
+          <AitFeature Name="WinJS.Binding.List" />
+          <AitFeature Name="WinJS.Namespace.define" />
+        </AitCategory>
+      </AitFile>
+      <AitFile ErrorCode="0" Name="about_us.html" Id="00003f88db238d773c9f8daf58e79b113ca02c2fc0bb">
+        <AitCategory Id="WRTJavaScript">
+          <AitFeature Name="WinJS.UI.SettingsFlyout" />
+          <AitFeature Name="WinJS.UI.SettingsFlyout.show" />
+        </AitCategory>
+      </AitFile>
+      <AitFile ErrorCode="0" Name="fullSearch.html" Id="00003faad7b58828c12c6144b7e1b5db2e29f4fb33a4">
+        <AitCategory Id="WRTJavaScript">
+          <AitFeature Name="WinJS.Binding.Template" />
+          <AitFeature Name="WinJS.UI.GridLayout" />
+          <AitFeature Name="WinJS.UI.ListLayout" />
+          <AitFeature Name="WinJS.UI.ListView" />
+          <AitFeature Name="navigator.js" />
+        </AitCategory>
+      </AitFile>
+      <AitFile ErrorCode="0" Name="map.js" Id="00004cb14634c939783e7a1b52e19ae7fc76591004d2">
+        <AitCategory Id="WRTJavaScript">
+          <AitFeature Name="WinJS.Binding" />
+          <AitFeature Name="WinJS.Navigation" />
+          <AitFeature Name="WinJS.Navigation.back" />
+          <AitFeature Name="WinJS.Navigation.navigate" />
+          <AitFeature Name="WinJS.Promise.timeout" />
+          <AitFeature Name="WinJS.UI" />
+          <AitFeature Name="WinJS.Utilities" />
+          <AitFeature Name="Windows.UI.ViewManagement.ApplicationView.value" />
+          <AitFeature Name="Windows.UI.ViewManagement.ApplicationViewState" />
+          <AitFeature Name="document.getElementById" />
+          <AitFeature Name="document.querySelector" />
+          <AitFeature Name="location" />
+        </AitCategory>
+      </AitFile>
+      <AitFile ErrorCode="0" Name="split.html" Id="0000554f31ef2d59368925e71035758e59f1830aa5b8">
+        <AitCategory Id="WRTJavaScript">
+          <AitFeature Name="WinJS" />
+          <AitFeature Name="WinJS.Binding.Template" />
+          <AitFeature Name="WinJS.UI.AppBar" />
+          <AitFeature Name="WinJS.UI.AppBarCommand" />
+          <AitFeature Name="WinJS.UI.Flyout" />
+          <AitFeature Name="WinJS.UI.ListLayout" />
+          <AitFeature Name="WinJS.UI.ListView" />
+          <AitFeature Name="WinJS.UI.ViewBox" />
+        </AitCategory>
+      </AitFile>
+      <AitFile ErrorCode="0" Name="veapicore.js" Id="0000655977942225dfcbbac05b9e6ec3df3bc6629067">
+        <AitCategory Id="WRTJavaScript">
+          <AitFeature Name="WinJS" />
+          <AitFeature Name="Windows.ApplicationModel" />
+          <AitFeature Name="Windows.ApplicationModel.Resources.Core" />
+          <AitFeature Name="Windows.ApplicationModel.Resources.Core.ResourceManager.current.defaultContext.languages" />
+          <AitFeature Name="Windows.System.UserProfile.GlobalizationPreferences.homeGeographicRegion" />
+          <AitFeature Name="document" />
+          <AitFeature Name="document.addEventListener" />
+          <AitFeature Name="document.attachEvent" />
+          <AitFeature Name="document.body" />
+          <AitFeature Name="document.body.appendChild" />
+          <AitFeature Name="document.body.removeChild" />
+          <AitFeature Name="document.body.scrollLeft" />
+          <AitFeature Name="document.body.scrollTop" />
+          <AitFeature Name="document.compatMode" />
+          <AitFeature Name="document.createElement" />
+          <AitFeature Name="document.createElementNS" />
+          <AitFeature Name="document.createEvent" />
+          <AitFeature Name="document.createTextNode" />
+          <AitFeature Name="document.defaultView" />
+          <AitFeature Name="document.defaultView.getComputedStyle" />
+          <AitFeature Name="document.documentElement" />
+          <AitFeature Name="document.documentElement.className" />
+          <AitFeature Name="document.documentElement.clientHeight" />
+          <AitFeature Name="document.documentElement.clientWidth" />
+          <AitFeature Name="document.documentElement.scrollLeft" />
+          <AitFeature Name="document.documentElement.scrollTop" />
+          <AitFeature Name="document.documentMode" />
+          <AitFeature Name="document.focus" />
+          <AitFeature Name="document.getElementById" />
+          <AitFeature Name="document.getElementsByTagName" />
+          <AitFeature Name="document.implementation" />
+          <AitFeature Name="document.implementation.hasFeature" />
+          <AitFeature Name="document.namespaces" />
+          <AitFeature Name="document.namespaces.add" />
+          <AitFeature Name="document.removeEventListener" />
+          <AitFeature Name="location" />
+          <AitFeature Name="navigator" />
+          <AitFeature Name="navigator.geolocation" />
+          <AitFeature Name="navigator.geolocation.getCurrentPosition" />
+          <AitFeature Name="navigator.msPointerEnabled" />
+          <AitFeature Name="navigator.userAgent" />
+          <AitFeature Name="navigator.userAgent.toLowerCase" />
+          <AitFeature Name="navigator.vendor" />
+          <AitFeature Name="window" />
+          <AitFeature Name="window." />
+          <AitFeature Name="window.Windows" />
+          <AitFeature Name="window.clearInterval" />
+          <AitFeature Name="window.clearTimeout" />
+          <AitFeature Name="window.console" />
+          <AitFeature Name="window.event" />
+          <AitFeature Name="window.focus" />
+          <AitFeature Name="window.g" />
+          <AitFeature Name="window.innerHeight" />
+          <AitFeature Name="window.innerWidth" />
+          <AitFeature Name="window.microsoftMapsNetworkCallback" />
+          <AitFeature Name="window.open" />
+          <AitFeature Name="window.opera" />
+          <AitFeature Name="window.pageXOffset" />
+          <AitFeature Name="window.pageYOffset" />
+          <AitFeature Name="window.self" />
+          <AitFeature Name="window.setInterval" />
+          <AitFeature Name="window.setTimeout" />
+          <AitFeature Name="window.top" />
+        </AitCategory>
+      </AitFile>
+      <AitFile ErrorCode="0" Name="default.js" Id="00006ff0b869fd0c0dce267430512069a033df2e7dc6">
+        <AitCategory Id="WRTJavaScript">
+          <AitFeature Name="URL" />
+          <AitFeature Name="WinJS.Application" />
+          <AitFeature Name="WinJS.Application.local.exists" />
+          <AitFeature Name="WinJS.Binding.List" />
+          <AitFeature Name="WinJS.Binding.optimizeBindingReferences" />
+          <AitFeature Name="WinJS.Navigation" />
+          <AitFeature Name="WinJS.Navigation.back" />
+          <AitFeature Name="WinJS.Navigation.navigate" />
+          <AitFeature Name="WinJS.Promise.timeout" />
+          <AitFeature Name="WinJS.UI.ViewBox" />
+          <AitFeature Name="WinJS.UI.processAll" />
+          <AitFeature Name="WinJS.xhr" />
+          <AitFeature Name="Windows.ApplicationModel.Activation" />
+          <AitFeature Name="Windows.ApplicationModel.DataTransfer.DataTransferManager.getForCurrentView" />
+          <AitFeature Name="Windows.ApplicationModel.DataTransfer.DataTransferManager.showShareUI" />
+          <AitFeature Name="Windows.Data.Xml.Dom.XmlDocument.loadFromFileAsync" />
+          <AitFeature Name="Windows.Data.Xml.Dom.XmlDocument.loadFromUriAsync" />
+          <AitFeature Name="Windows.Data.Xml.Dom.XmlLoadSettings" />
+          <AitFeature Name="Windows.Devices.Geolocation.Geolocator" />
+          <AitFeature Name="Windows.Devices.Geolocation.PositionAccuracy.high" />
+          <AitFeature Name="Windows.Foundation.Uri" />
+          <AitFeature Name="Windows.Networking.Connectivity" />
+          <AitFeature Name="Windows.Networking.Connectivity.NetworkConnectivityLevel.none" />
+          <AitFeature Name="Windows.Storage.ApplicationData.current.localFolder" />
+          <AitFeature Name="Windows.Storage.ApplicationData.current.localSettings" />
+          <AitFeature Name="Windows.Storage.CreationCollisionOption.replaceExisting" />
+          <AitFeature Name="Windows.UI.Notifications" />
+          <AitFeature Name="Windows.UI.Popups.MessageDialog" />
+          <AitFeature Name="document.getElementById" />
+          <AitFeature Name="document.querySelector" />
+          <AitFeature Name="location" />
+          <AitFeature Name="location.human_address" />
+        </AitCategory>
+      </AitFile>
+      <AitFile ErrorCode="0" Name="map.html" Id="000089919a448436baa473806c7e1e1b2f1d818cb6d5">
+        <AitCategory Id="WRTJavaScript">
+          <AitFeature Name="WinJS" />
+          <AitFeature Name="WinJS.UI.AppBar" />
+        </AitCategory>
+      </AitFile>
+      <AitFile ErrorCode="0" Name="Search.js" Id="00008cc112653630336a38e3cec4a2105d568cd6bb24">
+        <AitCategory Id="WRTJavaScript">
+          <AitFeature Name="WinJS.Binding.List" />
+          <AitFeature Name="WinJS.Binding.converter" />
+          <AitFeature Name="WinJS.Namespace.define" />
+          <AitFeature Name="WinJS.Navigation.navigate" />
+          <AitFeature Name="WinJS.UI.Pages.define" />
+          <AitFeature Name="WinJS.Utilities" />
+          <AitFeature Name="WinJS.Utilities.query" />
+          <AitFeature Name="document.getElementById" />
+          <AitFeature Name="document.querySelector" />
+        </AitCategory>
+      </AitFile>
+      <AitFile ErrorCode="0" Name="searchResults.js" Id="00008d7b5e6694f1527da44fcf6cbd010936d6ca580f">
+        <AitCategory Id="WRTJavaScript">
+          <AitFeature Name="WinJS.Application.addEventListener" />
+          <AitFeature Name="WinJS.Binding.List" />
+          <AitFeature Name="WinJS.Binding.converter" />
+          <AitFeature Name="WinJS.Binding.optimizeBindingReferences" />
+          <AitFeature Name="WinJS.Namespace.define" />
+          <AitFeature Name="WinJS.Navigation" />
+          <AitFeature Name="WinJS.Navigation.navigate" />
+          <AitFeature Name="WinJS.UI" />
+          <AitFeature Name="WinJS.Utilities" />
+          <AitFeature Name="Windows.ApplicationModel" />
+          <AitFeature Name="Windows.UI.ViewManagement.ApplicationView.value" />
+          <AitFeature Name="Windows.UI.ViewManagement.ApplicationViewState" />
+          <AitFeature Name="document.createElement" />
+          <AitFeature Name="document.querySelector" />
+          <AitFeature Name="location" />
+        </AitCategory>
+      </AitFile>
+      <AitFile ErrorCode="0" Name="fullSearch.js" Id="0000993c5ae6c8ac643e964e1da7011381de1a6ce5df">
+        <AitCategory Id="WRTJavaScript">
+          <AitFeature Name="WinJS.Binding.List" />
+          <AitFeature Name="WinJS.Binding.converter" />
+          <AitFeature Name="WinJS.Namespace.define" />
+          <AitFeature Name="WinJS.Navigation.navigate" />
+          <AitFeature Name="WinJS.UI" />
+          <AitFeature Name="WinJS.UI.Pages.define" />
+          <AitFeature Name="WinJS.Utilities" />
+          <AitFeature Name="WinJS.Utilities.query" />
+          <AitFeature Name="Windows.UI.ViewManagement.ApplicationView.value" />
+          <AitFeature Name="Windows.UI.ViewManagement.ApplicationViewState" />
+          <AitFeature Name="document.getElementById" />
+          <AitFeature Name="document.querySelector" />
+          <AitFeature Name="window.addEventListener" />
+          <AitFeature Name="window.innerWidth" />
+        </AitCategory>
+      </AitFile>
+      <AitFile ErrorCode="0" Name="searchResults.html" Id="0000a6565600c65688692aff300feddddc7f0402d698">
+        <AitCategory Id="WRTJavaScript">
+          <AitFeature Name="WinJS" />
+          <AitFeature Name="WinJS.Binding.Template" />
+          <AitFeature Name="WinJS.UI.ListView" />
+        </AitCategory>
+      </AitFile>
+      <AitFile ErrorCode="0" Name="items.html" Id="0000b529449747103e9760d367fe91e928dd65c356ab">
+        <AitCategory Id="WRTJavaScript">
+          <AitFeature Name="WinJS" />
+          <AitFeature Name="WinJS.Binding.Template" />
+          <AitFeature Name="WinJS.UI.AppBar" />
+          <AitFeature Name="WinJS.UI.AppBarCommand" />
+          <AitFeature Name="WinJS.UI.ListView" />
+          <AitFeature Name="Windows.ApplicationModel.Search.SearchPane.getForCurrentView" />
+        </AitCategory>
+      </AitFile>
+      <AitFile ErrorCode="0" Name="split.js" Id="0000c3201b1bedfab7d811d4ec151dde6683ceff65fa">
+        <AitCategory Id="WRTJavaScript">
+          <AitFeature Name="WinJS.Binding" />
+          <AitFeature Name="WinJS.Binding.List" />
+          <AitFeature Name="WinJS.Binding.processAll" />
+          <AitFeature Name="WinJS.Namespace.define" />
+          <AitFeature Name="WinJS.Navigation" />
+          <AitFeature Name="WinJS.Navigation.navigate" />
+          <AitFeature Name="WinJS.Promise.timeout" />
+          <AitFeature Name="WinJS.UI" />
+          <AitFeature Name="WinJS.Utilities" />
+          <AitFeature Name="WinJS.xhr" />
+          <AitFeature Name="Windows.Foundation.Uri" />
+          <AitFeature Name="Windows.Security.Credentials.UI.AuthenticationProtocol.basic" />
+          <AitFeature Name="Windows.Security.Credentials.UI.CredentialPicker" />
+          <AitFeature Name="Windows.Security.Credentials.UI.CredentialPickerOptions" />
+          <AitFeature Name="Windows.Storage.ApplicationData.current.localSettings" />
+          <AitFeature Name="Windows.UI.Notifications" />
+          <AitFeature Name="Windows.UI.Popups.MessageDialog" />
+          <AitFeature Name="Windows.UI.StartScreen.ForegroundText.light" />
+          <AitFeature Name="Windows.UI.StartScreen.SecondaryTile" />
+          <AitFeature Name="Windows.UI.StartScreen.SecondaryTile.findAllForPackageAsync" />
+          <AitFeature Name="Windows.UI.StartScreen.TileOptions.showNameOnLogo" />
+          <AitFeature Name="Windows.UI.ViewManagement.ApplicationView.value" />
+          <AitFeature Name="Windows.UI.ViewManagement.ApplicationViewState" />
+          <AitFeature Name="document.body.querySelector" />
+          <AitFeature Name="document.getElementById" />
+          <AitFeature Name="document.querySelector" />
+          <AitFeature Name="location" />
+        </AitCategory>
+      </AitFile>
+      <AitFile ErrorCode="0" Name="Comments.js" Id="0000c8c1b6dccd381428391510b2cdf90f943a909315">
+        <AitCategory Id="WRTJavaScript">
+          <AitFeature Name="WinJS.Binding.List" />
+          <AitFeature Name="WinJS.UI.GridLayout" />
+          <AitFeature Name="WinJS.UI.ListLayout" />
+          <AitFeature Name="WinJS.UI.Pages.define" />
+          <AitFeature Name="WinJS.Utilities" />
+          <AitFeature Name="WinJS.xhr" />
+          <AitFeature Name="Windows.Security.Credentials.UI.AuthenticationProtocol.basic" />
+          <AitFeature Name="Windows.Security.Credentials.UI.CredentialPicker" />
+          <AitFeature Name="Windows.Security.Credentials.UI.CredentialPickerOptions" />
+          <AitFeature Name="Windows.UI.Popups.MessageDialog" />
+          <AitFeature Name="Windows.UI.ViewManagement.ApplicationView.value" />
+          <AitFeature Name="Windows.UI.ViewManagement.ApplicationViewState" />
+          <AitFeature Name="document.getElementById" />
+          <AitFeature Name="window.addEventListener" />
+        </AitCategory>
+      </AitFile>
+      <AitFile ErrorCode="0" Name="default.html" Id="0000e89232a6390e454789f192acf29cf1709e9c0833">
+        <AitCategory Id="WRTJavaScript">
+          <AitFeature Name="WinJS" />
+          <AitFeature Name="WinJS.UI.AppBar" />
+          <AitFeature Name="WinJS.UI.AppBarCommand" />
+          <AitFeature Name="navigator.js" />
+        </AitCategory>
+      </AitFile>
+      <AitFile ErrorCode="0" Name="PrivacyPolicy.html" Id="0000f0655a5f4b035f931edc97ae60951b1434e178b2">
+        <AitCategory Id="WRTJavaScript">
+          <AitFeature Name="WinJS.UI.SettingsFlyout" />
+          <AitFeature Name="WinJS.UI.SettingsFlyout.show" />
+          <AitFeature Name="location" />
+        </AitCategory>
+      </AitFile>
+      <AitFile ErrorCode="0" Name="GovFinderBackgroundTask.winmd" Id="0000facca3537867acdc9180f7ee9298a36dadd68504">
+        <AitCategory Id="ApiStatic">
+          <AitFeature Name="mscoree.dll!_CorDllMain" />
+        </AitCategory>
+        <AitCategory Id="DotNet">
+          <AitFeature Name="System.Activator" />
+          <AitFeature Name="System.Activator.CreateInstance" />
+          <AitFeature Name="System.AsyncCallback" />
+          <AitFeature Name="System.AsyncCallback..ctor" />
+          <AitFeature Name="System.Collections.Generic.IDictionary`2" />
+          <AitFeature Name="System.Collections.Generic.IReadOnlyList`1" />
+          <AitFeature Name="System.Collections.Generic.List`1" />
+          <AitFeature Name="System.Convert" />
+          <AitFeature Name="System.Convert.ToInt32" />
+          <AitFeature Name="System.Diagnostics.DebuggableAttribute" />
+          <AitFeature Name="System.Diagnostics.DebuggableAttribute..ctor" />
+          <AitFeature Name="System.Exception" />
+          <AitFeature Name="System.IAsyncResult" />
+          <AitFeature Name="System.IAsyncResult.get_AsyncState" />
+          <AitFeature Name="System.IDisposable" />
+          <AitFeature Name="System.IDisposable.Dispose" />
+          <AitFeature Name="System.IO.MemoryStream" />
+          <AitFeature Name="System.IO.MemoryStream..ctor" />
+          <AitFeature Name="System.IO.MemoryStream.ToArray" />
+          <AitFeature Name="System.IO.Stream" />
+          <AitFeature Name="System.IO.StreamReader" />
+          <AitFeature Name="System.IO.StreamReader..ctor" />
+          <AitFeature Name="System.IO.TextReader" />
+          <AitFeature Name="System.IO.TextReader.ReadToEnd" />
+          <AitFeature Name="System.Int32" />
+          <AitFeature Name="System.Int32.ToString" />
+          <AitFeature Name="System.Net.HttpWebRequest" />
+          <AitFeature Name="System.Net.HttpWebResponse" />
+          <AitFeature Name="System.Net.WebRequest" />
+          <AitFeature Name="System.Net.WebRequest.BeginGetResponse" />
+          <AitFeature Name="System.Net.WebRequest.Create" />
+          <AitFeature Name="System.Net.WebRequest.EndGetResponse" />
+          <AitFeature Name="System.Net.WebResponse" />
+          <AitFeature Name="System.Net.WebResponse.Dispose" />
+          <AitFeature Name="System.Net.WebResponse.GetResponseStream" />
+          <AitFeature Name="System.Object" />
+          <AitFeature Name="System.Object..ctor" />
+          <AitFeature Name="System.Object.GetType" />
+          <AitFeature Name="System.Object.ToString" />
+          <AitFeature Name="System.Reflection.AssemblyCompanyAttribute" />
+          <AitFeature Name="System.Reflection.AssemblyCompanyAttribute..ctor" />
+          <AitFeature Name="System.Reflection.AssemblyConfigurationAttribute" />
+          <AitFeature Name="System.Reflection.AssemblyConfigurationAttribute..ctor" />
+          <AitFeature Name="System.Reflection.AssemblyCopyrightAttribute" />
+          <AitFeature Name="System.Reflection.AssemblyCopyrightAttribute..ctor" />
+          <AitFeature Name="System.Reflection.AssemblyDescriptionAttribute" />
+          <AitFeature Name="System.Reflection.AssemblyDescriptionAttribute..ctor" />
+          <AitFeature Name="System.Reflection.AssemblyFileVersionAttribute" />
+          <AitFeature Name="System.Reflection.AssemblyFileVersionAttribute..ctor" />
+          <AitFeature Name="System.Reflection.AssemblyProductAttribute" />
+          <AitFeature Name="System.Reflection.AssemblyProductAttribute..ctor" />
+          <AitFeature Name="System.Reflection.AssemblyTitleAttribute" />
+          <AitFeature Name="System.Reflection.AssemblyTitleAttribute..ctor" />
+          <AitFeature Name="System.Reflection.AssemblyTrademarkAttribute" />
+          <AitFeature Name="System.Reflection.AssemblyTrademarkAttribute..ctor" />
+          <AitFeature Name="System.Runtime.CompilerServices.CompilationRelaxationsAttribute" />
+          <AitFeature Name="System.Runtime.CompilerServices.CompilationRelaxationsAttribute..ctor" />
+          <AitFeature Name="System.Runtime.CompilerServices.CompilerGeneratedAttribute" />
+          <AitFeature Name="System.Runtime.CompilerServices.CompilerGeneratedAttribute..ctor" />
+          <AitFeature Name="System.Runtime.CompilerServices.RuntimeCompatibilityAttribute" />
+          <AitFeature Name="System.Runtime.CompilerServices.RuntimeCompatibilityAttribute..ctor" />
+          <AitFeature Name="System.Runtime.InteropServices.ComVisibleAttribute" />
+          <AitFeature Name="System.Runtime.InteropServices.ComVisibleAttribute..ctor" />
+          <AitFeature Name="System.Runtime.Serialization.Json.DataContractJsonSerializer" />
+          <AitFeature Name="System.Runtime.Serialization.Json.DataContractJsonSerializer..ctor" />
+          <AitFeature Name="System.Runtime.Serialization.Json.DataContractJsonSerializer.ReadObject" />
+          <AitFeature Name="System.Runtime.Serialization.Json.DataContractJsonSerializer.WriteObject" />
+          <AitFeature Name="System.Runtime.Versioning.TargetFrameworkAttribute" />
+          <AitFeature Name="System.Runtime.Versioning.TargetFrameworkAttribute..ctor" />
+          <AitFeature Name="System.String" />
+          <AitFeature Name="System.String.Concat" />
+          <AitFeature Name="System.String.Empty" />
+          <AitFeature Name="System.String.op_Inequality" />
+          <AitFeature Name="System.Text.Encoding" />
+          <AitFeature Name="System.Text.Encoding.GetBytes" />
+          <AitFeature Name="System.Text.Encoding.GetString" />
+          <AitFeature Name="System.Text.Encoding.get_UTF8" />
+          <AitFeature Name="System.Text.Encoding.get_Unicode" />
+          <AitFeature Name="System.Type" />
+          <AitFeature Name="System.Uri" />
+          <AitFeature Name="System.Uri..ctor" />
+        </AitCategory>
+        <AitCategory Id="DotNetWinRt">
+          <AitFeature Name="Windows.ApplicationModel.Background.BackgroundTaskDeferral" />
+          <AitFeature Name="Windows.ApplicationModel.Background.BackgroundTaskDeferral.Complete" />
+          <AitFeature Name="Windows.ApplicationModel.Background.IBackgroundTask" />
+          <AitFeature Name="Windows.ApplicationModel.Background.IBackgroundTask.Run" />
+          <AitFeature Name="Windows.ApplicationModel.Background.IBackgroundTaskInstance" />
+          <AitFeature Name="Windows.Data.Xml.Dom.IXmlNode" />
+          <AitFeature Name="Windows.Data.Xml.Dom.IXmlNodeSerializer" />
+          <AitFeature Name="Windows.Data.Xml.Dom.IXmlNodeSerializer.put_InnerText" />
+          <AitFeature Name="Windows.Data.Xml.Dom.XmlDocument" />
+          <AitFeature Name="Windows.Data.Xml.Dom.XmlDocument.GetElementsByTagName" />
+          <AitFeature Name="Windows.Data.Xml.Dom.XmlElement" />
+          <AitFeature Name="Windows.Data.Xml.Dom.XmlElement.SetAttribute" />
+          <AitFeature Name="Windows.Data.Xml.Dom.XmlNodeList" />
+          <AitFeature Name="Windows.Foundation.Collections.IPropertySet" />
+          <AitFeature Name="Windows.Foundation.Metadata.ActivatableAttribute" />
+          <AitFeature Name="Windows.Foundation.Metadata.ActivatableAttribute..ctor" />
+          <AitFeature Name="Windows.Foundation.Metadata.DefaultAttribute" />
+          <AitFeature Name="Windows.Foundation.Metadata.DefaultAttribute..ctor" />
+          <AitFeature Name="Windows.Foundation.Metadata.VersionAttribute" />
+          <AitFeature Name="Windows.Foundation.Metadata.VersionAttribute..ctor" />
+          <AitFeature Name="Windows.Storage.ApplicationData" />
+          <AitFeature Name="Windows.Storage.ApplicationData.get_Current" />
+          <AitFeature Name="Windows.Storage.ApplicationData.get_LocalSettings" />
+          <AitFeature Name="Windows.Storage.ApplicationDataContainer" />
+          <AitFeature Name="Windows.Storage.ApplicationDataContainer.get_Values" />
+          <AitFeature Name="Windows.UI.Notifications.TileNotification" />
+          <AitFeature Name="Windows.UI.Notifications.TileNotification..ctor" />
+          <AitFeature Name="Windows.UI.Notifications.TileTemplateType" />
+          <AitFeature Name="Windows.UI.Notifications.TileUpdateManager" />
+          <AitFeature Name="Windows.UI.Notifications.TileUpdateManager.CreateTileUpdaterForApplication" />
+          <AitFeature Name="Windows.UI.Notifications.TileUpdateManager.GetTemplateContent" />
+          <AitFeature Name="Windows.UI.Notifications.TileUpdater" />
+          <AitFeature Name="Windows.UI.Notifications.TileUpdater.Clear" />
+          <AitFeature Name="Windows.UI.Notifications.TileUpdater.EnableNotificationQueue" />
+          <AitFeature Name="Windows.UI.Notifications.TileUpdater.Update" />
+        </AitCategory>
+      </AitFile>
+      <AitFile ErrorCode="0" Name="Comments.html" Id="0000fc596c240b7d9b25410463b6e7b3e7cce7164867">
+        <AitCategory Id="WRTJavaScript">
+          <AitFeature Name="WinJS" />
+          <AitFeature Name="WinJS.Binding.Template" />
+          <AitFeature Name="WinJS.UI.AppBar" />
+          <AitFeature Name="WinJS.UI.AppBarCommand" />
+          <AitFeature Name="WinJS.UI.Flyout" />
+          <AitFeature Name="WinJS.UI.GridLayout" />
+          <AitFeature Name="WinJS.UI.ListView" />
+        </AitCategory>
+      </AitFile>
+    </AitStaticAnalysis>
+  </DEPENDENCY_INFORMATION>
+</REPORT>

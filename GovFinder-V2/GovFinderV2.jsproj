@@ -1,0 +1,240 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|AnyCPU">
+      <Configuration>Debug</Configuration>
+      <Platform>AnyCPU</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|ARM">
+      <Configuration>Debug</Configuration>
+      <Platform>ARM</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x86">
+      <Configuration>Debug</Configuration>
+      <Platform>x86</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|AnyCPU">
+      <Configuration>Release</Configuration>
+      <Platform>AnyCPU</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|ARM">
+      <Configuration>Release</Configuration>
+      <Platform>ARM</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x86">
+      <Configuration>Release</Configuration>
+      <Platform>x86</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>301679a6-ef8b-4070-b521-56b630419bc4</ProjectGuid>
+    <SccProjectName>SAK</SccProjectName>
+    <SccProvider>SAK</SccProvider>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccLocalPath>SAK</SccLocalPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '11.0'">
+    <VisualStudioVersion>11.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\$(WMSJSProjectDirectory)\Microsoft.VisualStudio.$(WMSJSProject).Default.props" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\$(WMSJSProjectDirectory)\Microsoft.VisualStudio.$(WMSJSProject).props" />
+  <PropertyGroup>
+    <TargetPlatformIdentifier>Windows</TargetPlatformIdentifier>
+    <TargetPlatformVersion>8.0</TargetPlatformVersion>
+    <DefaultLanguage>en-US</DefaultLanguage>
+    <PackageCertificateKeyFile>GovFinder_TemporaryKey.pfx</PackageCertificateKeyFile>
+    <AppxAutoIncrementPackageRevision>True</AppxAutoIncrementPackageRevision>
+    <AppxPackageDir>C:\Users\David\Desktop\</AppxPackageDir>
+    <PackageCertificateThumbprint>6807DAEBE94F0E0E503F21F0D9F9611398BA6A6A</PackageCertificateThumbprint>
+  </PropertyGroup>
+  <ItemGroup>
+    <AppxManifest Include="package.appxmanifest">
+      <SubType>Designer</SubType>
+    </AppxManifest>
+    <Content Include="css\default.css" />
+    <Content Include="Datasets\GovFinderDataSets.xml" />
+    <None Include="GovFinder_TemporaryKey.pfx" />
+    <None Include="GovFinderV2_TemporaryKey.pfx" />
+    <Content Include="images\100x100-black.png" />
+    <Content Include="images\100x100-white.png" />
+    <Content Include="images\250new\Community Centers.png" />
+    <Content Include="images\250new\Fire Department.png" />
+    <Content Include="images\250new\Health Clinic.png" />
+    <Content Include="images\250new\Libraries.png" />
+    <Content Include="images\250new\Police Station.png" />
+    <Content Include="images\250new\Recreation.png" />
+    <Content Include="images\250new\Representitives Office.png" />
+    <Content Include="images\250new\School.png" />
+    <Content Include="images\250new\Technology Centers.png" />
+    <Content Include="images\250new\Workforce Center.png" />
+    <Content Include="images\250\Administrative.png" />
+    <Content Include="images\250\Building &amp; Zoning.png" />
+    <Content Include="images\250\Commissioner.png" />
+    <Content Include="images\250\Community Centers.png" />
+    <Content Include="images\250\Courts.png" />
+    <Content Include="images\250\Economic Development.png" />
+    <Content Include="images\250\Finance.png" />
+    <Content Include="images\250\Fire Department.png" />
+    <Content Include="images\250\Health and Hospitals System.png" />
+    <Content Include="images\250\Health Clinic.png" />
+    <Content Include="images\250\Human Resources.png" />
+    <Content Include="images\250\Information Technology.png" />
+    <Content Include="images\250\Libraries.png" />
+    <Content Include="images\250\Police Station.png" />
+    <Content Include="images\250\Property &amp; Tax.png" />
+    <Content Include="images\250\Public Records.png" />
+    <Content Include="images\250\Recreation.png" />
+    <Content Include="images\250\Representitive%27s Office.png" />
+    <Content Include="images\250\School.png" />
+    <Content Include="images\250\Sheriff, Corrections and Public Safety.png" />
+    <Content Include="images\250\Technology Centers.png" />
+    <Content Include="images\250\Veteran%27s Services.png" />
+    <Content Include="images\250\Workforce Center.png" />
+    <Content Include="images\250\w\Administrative.png" />
+    <Content Include="images\250\w\Building &amp; Zoning.png" />
+    <Content Include="images\250\w\Commissioner.png" />
+    <Content Include="images\250\w\Community Centers.png" />
+    <Content Include="images\250\w\Courts.png" />
+    <Content Include="images\250\w\Economic Development.png" />
+    <Content Include="images\250\w\Finance.png" />
+    <Content Include="images\250\w\Fire Department.png" />
+    <Content Include="images\250\w\Health and Hospitals System.png" />
+    <Content Include="images\250\w\Health Clinic.png" />
+    <Content Include="images\250\w\Human Resources.png" />
+    <Content Include="images\250\w\Information Technology.png" />
+    <Content Include="images\250\w\Libraries.png" />
+    <Content Include="images\250\w\Police Station.png" />
+    <Content Include="images\250\w\Property &amp; Tax.png" />
+    <Content Include="images\250\w\Public Records.png" />
+    <Content Include="images\250\w\Recreation.png" />
+    <Content Include="images\250\w\Representitives Office.png" />
+    <Content Include="images\250\w\Representitive.png" />
+    <Content Include="images\250\w\School.png" />
+    <Content Include="images\250\w\Sheriff, Corrections and Public Safety.png" />
+    <Content Include="images\250\w\Technology Centers.png" />
+    <Content Include="images\250\w\Veteran%27s Services.png" />
+    <Content Include="images\250\w\Workforce Center.png" />
+    <Content Include="images\32x32-black.png" />
+    <Content Include="images\32x32-white.png" />
+    <Content Include="images\32\Administrative.png" />
+    <Content Include="images\32\Building &amp; Zoning.png" />
+    <Content Include="images\32\Commissioner.png" />
+    <Content Include="images\32\Community Centers.png" />
+    <Content Include="images\32\Courts.png" />
+    <Content Include="images\32\Economic Development.png" />
+    <Content Include="images\32\Finance.png" />
+    <Content Include="images\32\Fire Department.png" />
+    <Content Include="images\32\Health and Hospitals System.png" />
+    <Content Include="images\32\Health Clinic.png" />
+    <Content Include="images\32\Human Resources.png" />
+    <Content Include="images\32\Information Technology.png" />
+    <Content Include="images\32\Libraries.png" />
+    <Content Include="images\32\Police Station.png" />
+    <Content Include="images\32\Property &amp; Tax.png" />
+    <Content Include="images\32\Public Records.png" />
+    <Content Include="images\32\Recreation.png" />
+    <Content Include="images\32\Representitive%27s Office.png" />
+    <Content Include="images\32\School.png" />
+    <Content Include="images\32\Sheriff, Corrections and Public Safety.png" />
+    <Content Include="images\32\Technology Centers.png" />
+    <Content Include="images\32\Veteran%27s Services.png" />
+    <Content Include="images\32\Workforce Center.png" />
+    <Content Include="images\600x600-black.png" />
+    <Content Include="images\600x600-white.png" />
+    <Content Include="images\Add.png" />
+    <Content Include="images\AppIcons\splashscreen.png" />
+    <Content Include="images\AppIcons\storelogo.png" />
+    <Content Include="images\BackgroundImage.png" />
+    <Content Include="images\bedgeLogo.scale-100.png" />
+    <Content Include="images\currentpin.png" />
+    <Content Include="images\DetailedView.png" />
+    <Content Include="images\distance.png" />
+    <Content Include="images\edBackground.png" />
+    <Content Include="images\GovFinder-Black.png" />
+    <Content Include="images\GovFinder-Color.png" />
+    <Content Include="images\ItemBackgroundImage.png" />
+    <Content Include="images\location.png" />
+    <Content Include="images\logo.png" />
+    <Content Include="images\logo1.jpg" />
+    <Content Include="images\MainScreenLoader.png" />
+    <Content Include="images\map-icons.png" />
+    <Content Include="images\Map.png" />
+    <Content Include="images\nyBackground.png" />
+    <Content Include="images\Phone.png" />
+    <Content Include="images\pushpin.png" />
+    <Content Include="images\Round.png" />
+    <Content Include="images\Search.png" />
+    <Content Include="images\SearchBackground.png" />
+    <Content Include="images\Settings.png" />
+    <Content Include="images\smalllogo.png" />
+    <Content Include="images\splash1.png" />
+    <Content Include="images\splash.scale-100.png" />
+    <Content Include="images\splash.scale-140.png" />
+    <Content Include="images\splash.scale-180.png" />
+    <Content Include="images\splashscreen.png" />
+    <Content Include="images\storelogo.scale-100.png" />
+    <Content Include="images\w150.png" />
+    <Content Include="images\w24.png" />
+    <Content Include="images\w30.png" />
+    <Content Include="images\w310.png" />
+    <Content Include="images\w50.png" />
+    <Content Include="js\data.js" />
+    <Content Include="js\default.js" />
+    <Content Include="js\navigator.js" />
+    <Content Include="pages\about\about_us.css" />
+    <Content Include="pages\about\about_us.html" />
+    <Content Include="pages\comments\Comments.css" />
+    <Content Include="pages\comments\Comments.html" />
+    <Content Include="pages\comments\Comments.js" />
+    <Content Include="pages\fullsearch\fullSearch.css" />
+    <Content Include="pages\fullsearch\fullSearch.html" />
+    <Content Include="pages\fullsearch\fullSearch.js" />
+    <Content Include="pages\items\items.css" />
+    <Content Include="pages\items\items.html" />
+    <Content Include="pages\items\items.js" />
+    <Content Include="pages\mapview\map.css" />
+    <Content Include="pages\mapview\map.html" />
+    <Content Include="pages\mapview\map.js" />
+    <Content Include="pages\privacy_policy\PrivacyPolicy.css" />
+    <Content Include="pages\privacy_policy\PrivacyPolicy.html" />
+    <Content Include="pages\search\Search.css" />
+    <Content Include="pages\search\Search.html" />
+    <Content Include="pages\search\Search.js" />
+    <Content Include="pages\split\split.css" />
+    <Content Include="pages\split\split.html" />
+    <Content Include="pages\split\split.js" />
+    <Content Include="default.html" />
+    <Content Include="searchResults.css" />
+    <Content Include="searchResults.html" />
+    <Content Include="searchResults.js" />
+    <None Include="splits_TemporaryKey.pfx" />
+  </ItemGroup>
+  <ItemGroup>
+    <SDKReference Include="Bing.Maps.JavaScript, Version=1.113.0601.0" />
+    <SDKReference Include="Microsoft.WinJS.1.0, Version=1.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\GovFinderBackgroundTask\GovFinderBackgroundTask.csproj" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\$(WMSJSProjectDirectory)\Microsoft.VisualStudio.$(WMSJSProject).targets" />
+  <!-- To modify your build process, add your task inside one of the targets below then uncomment
+       that target and the DisableFastUpToDateCheck PropertyGroup. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  <PropertyGroup>
+    <DisableFastUpToDateCheck>true</DisableFastUpToDateCheck>
+  </PropertyGroup>
+  -->
+</Project>

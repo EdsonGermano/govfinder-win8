@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>BingMapJS</id>
+    <version>1.1.0</version>
+    <title>BingMap.JS</title>
+    <authors>Prashant Khandelwal</authors>
+    <owners>Prashant Khandelwal</owners>
+    <projectUrl>http://midnightprogrammer.net/bingmapjs/</projectUrl>
+    <iconUrl>http://midnightprogrammer.net/bingmapjs/bing.png</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>BingMaps.js is a jQuery plugin to show Bing map on your web page and does all the configurations by itself. Yo can also set the other options for the map. The plugin also uses the Bing Maps API which allows you to search the location/address and pinpoint it on the map.</description>
+    <releaseNotes />
+    <copyright>Copyright © 2012</copyright>
+    <language />
+    <tags>bingmap jquery plugin</tags>
+  </metadata>
+</package>

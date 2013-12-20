@@ -1,0 +1,78 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>itemsPage</title>
+
+    <!-- WinJS references -->
+    <link href="//Microsoft.WinJS.1.0/css/ui-dark.css" rel="stylesheet" />
+    <script src="//Microsoft.WinJS.1.0/js/base.js"></script>
+    <script src="//Microsoft.WinJS.1.0/js/ui.js"></script>
+
+    <link href="/css/default.css" rel="stylesheet" />
+    <link href="/pages/items/items.css" rel="stylesheet" />
+    <script src="/js/data.js"></script>
+    <script src="/pages/items/items.js"></script>
+
+
+    <script>
+        function OpenSearchCharm() {
+            Windows.ApplicationModel.Search.SearchPane.getForCurrentView().show();
+        }
+
+
+    </script>
+</head>
+<body>
+
+    <!-- These templates are used to display each item in the ListView declared below. -->
+    <div class="headertemplate" data-win-control="WinJS.Binding.Template">
+        <!--  <span class="group-title win-type-ellipsis" >
+                <h4 data-win-bind="textContent: title" style="text-align:center;  color:white; background-color:grey; width:125px; font-size: 26px;font-family: 'Myfont';"></h4>
+            </span>-->
+
+    </div>
+    <!-- This template is used to display each item in the ListView declared below. -->
+    <div class="itemtemplate" data-win-control="WinJS.Binding.Template">
+        <div class="item tile">
+            <img class="item-image" src="#" data-win-bind="id: title; src: backgroundImage; alt: title;" />
+            <div id="abc" class="item-overlay">
+                <h4 class="item-title" style="font-family: 'Myfont';" data-win-bind="textContent: title"></h4>
+                <!-- <h6 class="item-subtitle win-type-ellipsis" data-win-bind="textContent: subtitle"></h6>-->
+            </div>
+        </div>
+    </div>
+
+    <!-- The content that will be loaded and displayed. -->
+    <div class="itemsBackgroundImage" id="backgroundimage">
+        <div class="itemspage fragment ">
+            <header aria-label="Header content" role="banner">
+                <button class="win-backbutton" aria-label="Back" disabled type="button"></button>
+                <div class="titlearea win-type-ellipsis" style="float: left; text-align: left;">
+                    <img class="pageLogo" src="../../images/GovFinder-Color.png" />
+                </div>
+                <div class="titlearea win-type-ellipsis" id="SearchImage">
+                    <img id="searchPage" src="../../images/Search.png" />
+                </div>
+
+            </header>
+            <div class="citygroup" style="width: 180px;">
+                <!--  <button id="btnchicago" style="font-family:'Myfont';font-size:30px; width:180px; color:#ee2939; margin-top:18px; text-align:right;  border-style:none;">Chicago</button>
+               <button id="btnedmonton" style="font-family:'Myfont';font-size:30px; width:180px; text-align:right; border-style:none;">Edmonton</button>
+               <button id="btnnewyork" style="font-family:'Myfont';font-size:30px; width:180px; text-align:right; border-style:none;">New York</button>
+       -->
+
+                <select  name="city" id="cityname" style=" width: 140px; height: 40px;  font-family:'Segoe UI';direction:rtl; font-size: 16px;font-weight:bold; background-color: black; opacity: 0.7; color: white; -webkit-appearance: none; overflow: hidden">
+                  
+                </select>
+
+            </div>
+
+            <!-- <h4 id="CityName" style="font-family:'Segoe WP';font-size:30px">Chicago</h4>-->
+            <section aria-label="Main content" role="main">
+                <div class="itemslist win-selectionstylefilled" aria-label="List of groups" data-win-control="WinJS.UI.ListView" data-win-options="{ selectionMode: 'none' }"></div>
+            </section>
+        </div>
+    </div>
+</body>
+</html>

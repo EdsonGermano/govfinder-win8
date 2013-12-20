@@ -1,0 +1,297 @@
+﻿/* Template for items in the ListView */
+
+
+.regularListIconTextItem {
+    width: 150px;
+    height: 95px;
+    overflow: hidden;
+    text-align: center;
+}
+
+
+#divTemplate {
+    float: left;
+    text-align: left;
+    width: auto;
+    margin-left: 10px;
+}
+
+.iconImage {
+    height: 30px;
+    width: 30px;
+    opacity: 0.5;
+    margin-top: 5px;
+}
+
+img.regularListIconTextItem-Image {
+    width: 130px;
+    height: 80px;
+    margin-left: 20px;
+}
+
+.regularListIconTextItem-Detail_FullPage {
+    -ms-grid-column: 2;
+    font-family: 'Segoe WP';
+    font-size: 14.93px;
+    font-weight: bold;
+    margin-left: 15px;
+    text-align: left;
+    width: 150px;
+    height: 60px;
+}
+
+#backgroundColor {
+    background-color: #959392;
+}
+
+h5 {
+    text-align: justify;
+}
+
+.fontColor {
+    color: white;
+    opacity: 0.5;
+}
+
+.backgroundButton {
+    color: black;
+    border-color: black;
+    opacity: 0.5;
+}
+
+/*For setting selected item background to black*/
+#listView .win-container .win-selectionbackground {
+    background-color: black;
+}
+/*For removing the scheckmark on selected item*/
+#listView .win-container .win-selectioncheckmark {
+    color: transparent;
+}
+/*For setting background color to light gray for not selected item*/
+#listView .win-container:not(.footprint):not(.hover) {
+    background-color: #868686;
+    border: solid;
+    border-color: gray;
+}
+
+#searchList .win-container:not(.footprint):not(.hover) {
+    background-color: transparent;
+}
+
+#searchedDiv {
+    -ms-grid-rows: 128px 1fr;
+    display: -ms-grid;
+    height: 100%;
+    width: 100%;
+}
+
+#mainGrid {
+    -ms-grid-columns: 1fr 1fr;
+    -ms-grid-rows: 128px 1fr;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 2;
+    display: -ms-grid;
+}
+
+
+
+@media screen and (-ms-view-state: fullscreen-landscape) {
+    #listView {       
+        height: 100%;
+    }
+
+    #categoryList {
+        margin-left: 120px;
+        margin-top: 10px;
+        display: block;
+        -ms-grid-column: 1;
+        -ms-grid-row: 2;
+    }
+
+    #searchedDiv {          
+        background-color: #3A342F;
+        -ms-grid-column: 2;
+        -ms-grid-row: 1;
+        -ms-grid-row-span: 2;
+    }
+
+    #searchTextSection {
+        margin-top: 20px; -ms-grid-row: 1;
+    }
+
+    #searchList {
+        -ms-grid-row: 2;
+        height: 100%;                   
+    }
+
+    #searchedImage {
+        width: 160px;
+        height: 150px;
+        margin: 5px;
+    }
+
+    #searchText {
+        width: calc(100%);
+    }
+
+    #getSearchFull {
+        display: block;
+    }
+
+    #searchTable {
+        margin-left: 15px;
+        margin-top: 30px;
+        width: calc(100%);
+    }
+}
+
+@media screen and (-ms-view-state: filled) {
+    #listView {       
+        height: 100%;        
+    }
+
+    #categoryList {
+        margin-left: 50px;
+        margin-top: 10px;
+        display: block;
+        -ms-grid-column: 1;
+        -ms-grid-row: 2;
+    }
+
+    #searchedDiv {
+        -ms-grid-column: 2;
+        -ms-grid-row: 1;
+        -ms-grid-row-span: 2;
+        background-color: #706E6C;
+    }
+
+    #searchTextSection {
+        margin-top: 20px; -ms-grid-row: 1;
+    }
+
+    #searchList {
+     -ms-grid-row: 2;
+        height: 100%; 
+    }
+
+    #searchedImage {
+        width: 160px;
+        height: 150px;
+        margin: 5px;
+    }
+
+    #searchText {
+        width: calc(100%);
+    }
+
+    #getSearchFull {
+        display: block;
+    }
+
+    #searchTable {
+        margin-left: 15px;
+        margin-top: 30px;
+        width: calc(100%);
+    }
+}
+
+@media screen and (-ms-view-state: snapped) {
+    #listView {
+       /*height:100%;*/
+    }
+
+    #categoryList {       
+        display: none;
+    }
+
+    #searchedDiv {
+        -ms-grid-column: 1;
+        -ms-grid-row: 2;
+        -ms-grid-row-span: 1;
+        background-color: #959392;
+    }
+    #tablesearchlist {
+       height:200px;
+    }
+    #searchTextSection {
+        margin-top: 5px; -ms-grid-row: 1;
+    }
+
+    #searchList {
+         -ms-grid-row: 2;
+        height: 100%; 
+    }
+
+    #searchedImage {
+        width: 120px;
+        height: 140px;
+        margin: 5px;
+    }
+
+    #getSearchFull {
+        display: block;
+    }
+
+    #searchText {
+        width: calc(100%);
+    }
+
+    #searchTable {
+        margin-left: 5px;
+        margin-top: 30px;
+        width: calc(100%);
+    }
+}
+
+@media screen and (-ms-view-state: fullscreen-portrait) {
+    #listView {       
+        height: 100%;
+        margin-left: 50px;
+    }
+
+    #categoryList {
+        margin-left: 50px;
+        margin-top: 10px;
+        display: block;
+         -ms-grid-column: 1;
+        -ms-grid-row: 2;
+    }
+      #tablesearchlist {
+       height:200px;
+    }
+    #searchedDiv {
+          -ms-grid-column: 2;
+        -ms-grid-row: 1;
+        -ms-grid-row-span: 2;
+        background-color: #706E6C;
+    }
+
+    #searchTextSection {
+        margin-top: 20px; -ms-grid-row: 1;
+    }
+
+    #searchList {
+       -ms-grid-row: 2;
+        height: 100%;   
+    }
+
+    #searchedImage {
+        width: 100px;
+        height: 110px;
+        margin: 5px;
+    }
+
+    #searchText {
+        width: calc(100%);
+    }
+
+    #getSearchFull {
+        display: block;
+    }
+
+    #searchTable {
+        margin-left: 15px;
+        margin-top: 30px;
+        width: calc(100%);
+    }
+}

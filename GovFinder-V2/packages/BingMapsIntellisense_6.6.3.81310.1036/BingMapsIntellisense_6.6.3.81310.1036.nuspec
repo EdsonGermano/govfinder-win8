@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>BingMapsIntellisense_6</id>
+    <version>6.3.81310.1036</version>
+    <title>Bing Maps JavaScript Intellisense Helper v6.3</title>
+    <authors>http://vejs.codeplex.com</authors>
+    <owners>http://vejs.codeplex.com</owners>
+    <licenseUrl>http://vejs.codeplex.com/license</licenseUrl>
+    <projectUrl>http://vejs.codeplex.com/</projectUrl>
+    <iconUrl>http://download.codeplex.com/Project/Download/FileDownload.aspx?ProjectName=vejs&amp;DownloadId=142104&amp;Build=17672</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Enables JavaScript Intellisense for the Bing Maps v6.3 Ajax Map Control in Visual Studio.</description>
+    <summary>Enables JavaScript Intellisense for the Bing Maps v6.3 Ajax Map Control in Visual Studio.</summary>
+    <releaseNotes />
+    <copyright />
+    <language />
+    <tags>BingMaps Bing Maps Mapping Intellisense vejs javascript ajax</tags>
+  </metadata>
+</package>

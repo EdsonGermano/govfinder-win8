@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>commentPage</title>
+
+    <!-- WinJS references -->
+    <link href="//Microsoft.WinJS.1.0/css/ui-dark.css" rel="stylesheet" />
+    <script src="//Microsoft.WinJS.1.0/js/base.js"></script>
+    <script src="//Microsoft.WinJS.1.0/js/ui.js"></script>
+
+    <link href="/css/default.css" rel="stylesheet" />
+    <link href="/pages/comments/Comments.css" rel="stylesheet" />
+    <script src="/js/data.js"></script>
+    <script src="/pages/comments/Comments.js"></script>
+
+</head>
+<body style="background-color: black">
+    <div class="commentspage fragment">
+        <div id="itemtemplatecomments" data-win-control="WinJS.Binding.Template">
+            <div class="comment">
+                <h6 class="item-title win-type-ellipsis" style="font-weight: bold;color:black;margin-left: 10px;width:230px;white-space:nowrap;text-overflow:ellipsis;overflow:hidden;" data-win-bind="textContent: CommentTitle"></h6>
+                <h6 class="item-title win-type-ellipsis" style="word-wrap: break-word;height: 150px;overflow-y:inherit;overflow:auto; color:black;margin: 10px;" data-win-bind="textContent: CommentMessage"></h6>
+                <h6 class="item-title win-type-ellipsis" style="word-wrap: break-word; overflow-y:inherit; overflow:auto;  height: auto;color:black; margin: 10px;">Posted by: <span data-win-bind="textContent: Author">&nbsp;</span><span> on </span><span data-win-bind="textContent: CommentPublishAt"></span></h6>
+            <!--<h6 class="item-subtitle win-type-ellipsis" style="position: absolute;height: auto;color:black;margin: 10px;">Posted by: <span data-win-bind="textContent: Author"></span></h6>-->
+            <!--<h6 class="item-subtitle win-type-ellipsis" style="position: absolute;height: auto;color:black;margin: 10px; margin-top:40px;">on <span data-win-bind="textContent: CommentPublishAt"></span></h6>-->
+            </div>
+        </div>
+        <!--Bottom app bar-->
+          <div id="appbar" data-win-control="WinJS.UI.AppBar" style="background-color: #2f2e2c;">
+            <button data-win-control="WinJS.UI.AppBarCommand"
+                data-win-options="{label:'Add',icon:'add',id:'addnewcomment',section:'global',tooltip:'Add Comment'}">
+            </button>
+        </div>
+        <div id="newcomment" class="newcommentpopup" data-win-control="WinJS.UI.Flyout" aria-label="{Login flyout}">
+            <form onsubmit="return false;">
+                <h3 style="font-family: 'Myfont';">Title:</h3>
+                <input id="commenttitle" class="title" type="text" name="title" />
+                <h3 style="font-family: 'Myfont';">Comment:</h3>
+                <textarea id="commenttext" class="comment" style="height: 120px;" name="comment"></textarea><br>
+                <input id="newcommentadd" type="submit" value="Add" style="margin-left: 0px; margin-top: 10px;" />
+            </form>
+        </div>
+        <!--Top header -->
+        <header aria-label="Header content" role="banner">
+            <button class="win-backbutton" aria-label="Back" disabled type="button"></button>
+            <div class="titlearea">
+                <h1 class="pagetitle win-type-ellipsis">Comments</h1>
+            </div>
+        </header>
+        <div id="itemcommentlist" class="commentlistdiv"  aria-label="List of this group's items" data-win-control="WinJS.UI.ListView" data-win-options="{ selectionMode: 'none', swipeBehavior: 'none', tapBehavior : 'none', layout: {groupInfo: groupInfo, type: WinJS.UI.GridLayout} }"></div>
+        <p class="nocommentmsg" id="txtnoresult" style="font-size:20px; font-family: 'Myfont'; visibility:hidden; margin-top:10px; margin-left:140px;">No comments found.</p>
+    </div>
+    <!-- ENDSETTINGSFLYOUT -->
+</body>
+</html>

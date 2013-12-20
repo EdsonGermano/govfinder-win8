@@ -1,0 +1,123 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>splitPage</title>
+
+    <!-- WinJS references -->
+    <link href="//Microsoft.WinJS.1.0/css/ui-dark.css" rel="stylesheet" />
+    <script src="//Microsoft.WinJS.1.0/js/base.js"></script>
+    <script src="//Microsoft.WinJS.1.0/js/ui.js"></script>
+
+    <link href="/css/default.css" rel="stylesheet" />
+    <link href="/pages/split/split.css" rel="stylesheet" />
+    <script src="/js/data.js"></script>
+    <script src="/pages/split/split.js"></script>
+</head>
+<body>
+    <!-- This template is used to display each item in the ListView declared below. -->
+    <div class="itemtemplate" data-win-control="WinJS.Binding.Template">
+        <div class="item">
+            <img class="item-image" src="#" data-win-bind="src: backgroundImage; alt: id;" />
+            <div class="item-info">
+                <div class="item-title win-type-ellipsis" style=" background-color: black; opacity: 0.6;">
+                    <h6  style="overflow: hidden;text-overflow: ellipsis; -o-text-overflow: ellipsis;font-size: 16px; margin-left:10px; font-weight: bold;" data-win-bind="textContent: title"></h6>
+                      <h6  style="overflow: hidden;text-overflow: ellipsis;-o-text-overflow: ellipsis;font-size: 16px;margin-left:10px; font-weight: bold; "  data-win-bind="textContent: code"></h6>
+                   
+                </div>
+                <!--  <h6 class="item-subtitle"><span data-win-bind="textContent: commentCount"></span> <span onclick="www.showComments(this);" style="text-decoration: underline; cursor: pointer;">comment<span  data-win-bind="textContent: plural"></span></span></h6>-->
+            </div>
+        </div>
+    </div>
+
+    <!-- The content that will be loaded and displayed. -->
+    <div class="splitpage fragment">
+
+        <div class="itemlistsection" aria-label="List column">
+            <div id="itemsList" class="itemlist win-selectionstylefilled" aria-label="List of this group's items" data-win-control="WinJS.UI.ListView" data-win-options="{ selectionMode: 'single', swipeBehavior: 'none', tapBehavior: 'toggleSelect', loadingBehavior: 'incremental',  pagesToLoad: 20, pagesToLoadThreshold: 1 }"></div>
+        </div>
+
+        <div class="articlesection" aria-atomic="true" aria-label="Item detail column" aria-live="assertive">
+            <article>
+                <header class="header" style="display: none;">
+                    <div class="text">
+                        <h2 class="article-title win-type-ellipsis" data-win-bind="textContent: title"></h2>
+                        <h4 class="article-subtitle" data-win-bind="textContent: subtitle"></h4>
+                    </div>
+                    <img class="article-image" src="#" data-win-bind="src: backgroundImage; alt: title" />
+                </header>
+                <div class="article-content">
+                </div>
+            </article>
+        </div>
+
+        <div class="itemdetailsection" id="detailsection" style="visibility:hidden" aria-label="List column">
+
+            <div id="itemcommentlist" class="commentlistdiv" aria-label="List of this group's items" style="visibility: hidden; background-color: black;" data-win-control="WinJS.UI.ListView" data-win-options="{ selectionMode: 'none', swipeBehavior: 'none', tapBehavior: 'toggleSelect', loadingBehavior: 'incremental',  pagesToLoad: 20, pagesToLoadThreshold: 1, layout: {groupInfo: groupInfo, type: WinJS.UI.ListLayout} }"></div>
+            <div class="mainimage" id="imagesection" style="background-color: #2F2B26;">
+                <div class="image" data-win-control="WinJS.UI.ViewBox">
+                    <img id="selectedimage" style="visibility:hidden;" data-win-bind="src: Data.image; " />
+                </div>
+                <span class="indexno" id="indexnumber" data-win-bind="textContent: Data.indexno" style="height: 30px; width: 30px; position: absolute; top: 0; text-align: center; margin-top: 11px; margin-left: 9px; font-weight: bold; background-color: red; font-size: 16px;"></span>
+                <h1 class="name" data-win-bind="textContent: Data.title" style="padding-left: 3%; font-size: 39px; vertical-align: baseline;  padding-bottom: 5%; opacity: 0.6; background-color: black"></h1>
+                <h1 class="name" data-win-bind="textContent: Data.title" style="padding-left: 3%;  font-size: 39px;  vertical-align: baseline; padding-bottom: 5%;"></h1>
+            </div>
+            <h6 class="type" data-win-bind="textContent: Data.code" style="text-align: right; padding-top: 8px; padding-right: 3%;  font-size: 19.02px; vertical-align: middle; font-weight: bold"></h6>
+            <div class="detail" style="-ms-grid-row: 3;">
+                <img src="../../images/distance.png" width="40" height="40" style="margin-top: 55px; -ms-grid-column: 2; -ms-grid-row: 1;" />
+                <p class="distance" style="height: auto; margin-top: 40px; font-size: 24px;  -ms-grid-column: 3; font-weight: bold;">Distance</p>
+                <p class="distance" data-win-bind="textContent:  Data.distance" style=" font-size: 32.58px; color: #ee2939; -ms-grid-column: 3; margin-top: 65px;"></p>
+                <img src="../../images/Phone.png" width="40" height="40" style="margin-top: 35px; -ms-grid-column: 2; -ms-grid-row: 2;" />
+                <div class="phone" style="-ms-grid-row: 2; -ms-grid-column: 3;">
+                    <p class="phoneno" style="height: auto; margin-top: 20px; font-size: 24px; font-weight: bold;">Phone Number</p>
+                    <p class="phoneno" data-win-bind="textContent:  Data.phone" style=" font-size: 32.58px; height: auto; color: #ee2939; margin-top: -30px;"></p>
+                </div>
+                <p id="comments" class="itemcommentcounts" style=" font-size: 20.55px; -ms-grid-row: 3; -ms-grid-column: 2; -ms-grid-column-span: 2; margin-top: 0px;">
+                    <span data-win-bind="textContent: Data.commentcount"></span>
+                    <span style="text-decoration: underline; cursor: pointer;"> comments</span>
+                </p>
+               
+                <img id="addnewcomment" src="../../images/Add.png" width="30" height="30" style="margin-top: 0px; -ms-grid-column: 4; -ms-grid-row: 3;" />
+                
+            </div>
+            <!--<h6 class="item-subtitle"><span data-win-bind="textContent: commentCount"></span> <span onclick="www.showComments(this);" style="text-decoration: underline; cursor: pointer;">comment<span  data-win-bind="textContent: plural"></span></span></h6>-->
+        </div>
+        <header aria-label="Header content" role="banner">
+            <button class="win-backbutton" aria-label="Back" disabled type="button" style="position: fixed; border-color: black; color: black;"></button>
+            <h1 class="titlearea win-type-ellipsis">
+                <span class="pagetitle"></span>
+            </h1>
+        </header>
+        <div id="appbar" data-win-control="WinJS.UI.AppBar" style=" display:none; background-color: #2f2e2c;">
+
+            <button data-win-control="WinJS.UI.AppBarCommand"  disabled="disabled"
+                data-win-options="{label:'Pin',id:'cmdPin',icon:'pin',section:'selection',tooltip:'Pin item'}">
+            </button>
+            <button data-win-control="WinJS.UI.AppBarCommand" disabled="disabled"
+                data-win-options="{label:'Unpin',icon:'unpin', id:'cmdUnpin',section:'selection',tooltip:'Unpin item'}">
+            </button>
+
+            <button data-win-control="WinJS.UI.AppBarCommand" disabled="disabled" 
+                data-win-options="{label:'Refresh',icon:'refresh',id:'cmdRefresh',section:'global',tooltip:'Refresh'}">
+            </button>
+
+        </div>
+        <div id="appbartop" data-win-control="WinJS.UI.AppBar" data-win-options="{layout:'custom',placement:'top'}" style="background-color: #2f2e2c; height: 100px; text-align: right">
+            <button id="cmdMapView" style="background-color: #4F4D4A; height: 80px; width: 120px; margin-top: 10px; margin-right: 15px; text-align: left; border: none" disabled="disabled">
+                <img src="../../images/Map.png" alt="Alternate Text" style="width: 45px; height: 45px" /><br />
+                 Map View
+            </button>
+        </div>
+
+       <div id="newcomment" data-win-control="WinJS.UI.Flyout" aria-label="{Login flyout}">
+            <form onsubmit="return false;">
+                <h3 >Title:</h3>
+                <input id="commenttitle" class="title" type="text" name="title" />
+                <h3 >Comment:</h3>
+                <textarea id="commenttext" class="comment" style="height: 120px;" name="comment"></textarea><br>
+                <input id="newcommentadd" type="submit" value="Add" style="margin-left: 0px; margin-top: 10px;" />
+            </form>
+        </div>
+    </div>
+</body>
+</html>

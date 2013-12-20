@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <link href="/pages/about/about_us.css" rel="stylesheet" />
+    <title>About Us</title>
+</head>
+<body>
+    <!-- BEGINSETTINGFLYOUT -->
+    <div class="page-width pageBackground" data-win-control="WinJS.UI.SettingsFlyout" aria-label="Help settings flyout" data-win-options="{settingsCommandId:'aboutUs'}">
+        <!-- Use either 'win-ui-light' or 'win-ui-dark' depending on the contrast between the header title and background color -->
+        <div class="win-ui-dark win-header" id="backgroundColor">
+            <!-- Background color reflects app's personality -->
+            <button type="button" onclick="WinJS.UI.SettingsFlyout.show()" class="win-backbutton backgroundButton"></button>
+            <div class="win-label">About Socrata</div>
+            <!-- <img src="../images/smallTile-sdk.png" style="position: absolute; right: 40px;"/>-->
+        </div>
+        <div class="win-content pageBackground">
+            <div class="win-settings-section fontColor">
+                <h5>Socrata is a Seattle-based cloud software company, focused exclusively on democratizing access to government data. We help public sector organizations improve transparency, citizen service and fact-based decision-making by efficiently delivering data to citizens, employees and developers in a user-friendly experience on web, mobile and machine-to-machine interfaces.</h5>
+                <br />
+                <h5>Innovators like the World Bank, Medicare, Data.gov, EnergyStar, New York City, Chicago, San Francisco, Oregon and Maryland, have all chosen Socrata for its turnkey and low-cost cloud delivery of easy-to-use open data products.</h5>
+                <br />
+                <h5>The Socrata suite of products helps our customers unlock the full value of their data:</h5>
+                <br />
+                <h5>
+                    <ul>
+                        <li>Share public data with citizens and developers in the most engaging experience, with the world’s #1 open data solution, Socrata Open Data Cloud.</li>
+                        <br />
+                        <li>Empower employees to deliver amazing citizen self-service experiences with turnkey Quality of Life Apps from Socrata and the developer community.</li>
+                        <br />
+                        <li>Save time and money by deploying cloud APIs that connect ecosystem partners and mobile app developers to data with Socrata API Foundry.</li>
+                        <br />
+                        <li>Achieve higher levels of performance and shift to data-driven decision making with Socrata GovStat.</li>
+                        <br />
+                        <li>Appify their data and bring the citizen experience to the modern era with Socrata DataSlate.</li>
+                        <br />
+                        <li>Leverage the Socrata Data Consumerization Platform and tools to modernize their entire capture-to-consumption data infrastructure, and develop custom data products using professional services from Socrata and its partners.</li>
+                    </ul>
+                </h5>
+            </div>
+        </div>
+    </div>
+    <!-- ENDSETTINGSFLYOUT -->
+</body>
+</html>

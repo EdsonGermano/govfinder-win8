@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>mapPage</title>
+
+    <!-- WinJS references -->
+    <link href="//Microsoft.WinJS.1.0/css/ui-dark.css" rel="stylesheet" />
+    <script src="//Microsoft.WinJS.1.0/js/base.js"></script>
+    <script src="//Microsoft.WinJS.1.0/js/ui.js"></script>
+
+    <link href="/css/default.css" rel="stylesheet" />
+    <link href="/pages/mapview/map.css" rel="stylesheet" />
+    <script src="/js/data.js"></script>
+    <script src="/pages/mapview/map.js"></script>
+</head>
+<body>
+
+    <div class="mappage fragment">
+        <div class="articlesection" aria-atomic="true" aria-label="Item detail column" aria-live="assertive">
+            <article>
+                <header class="header" style="display: none;">
+                    <div class="text">
+                        <h2 class="article-title win-type-ellipsis" data-win-bind="textContent: title"></h2>
+                        <h4 class="article-subtitle" data-win-bind="textContent: subtitle"></h4>
+                    </div>
+                    <img class="article-image" src="#" data-win-bind="src: backgroundImage; alt: title" />
+                </header>
+                <div class="article-content">
+                </div>
+            </article>
+        </div>
+        <header aria-label="Header content" role="banner">
+            <button id="but" class="win-backbutton" aria-label="Back" disabled type="button" style="position: fixed; border-color: black; color: black;"></button>
+            <h1 class="titlearea win-type-ellipsis">
+                <!--<span class="pagetitle"></span>-->
+            </h1>
+        </header>
+        <div id="appbartop" data-win-control="WinJS.UI.AppBar" data-win-options="{layout:'custom',placement:'top'}" style="background-color: #2f2e2c; height: 100px; text-align: right">            
+            <button id="cmdDetailView" style="background-color: #4F4D4A; height: 80px; width: 120px; margin-top: 10px; margin-right: 15px; text-align: left; border: none">
+                <img src="../../images/DetailedView.png" alt="Alternate Text" style="width: 45px; height: 45px" /><br />
+                Detailed View
+            </button>
+        </div>
+    </div>
+</body>
+</html>

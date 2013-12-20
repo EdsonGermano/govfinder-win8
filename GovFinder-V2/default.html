@@ -1,0 +1,238 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Gov Finder</title>
+    <script>
+        var www = {};
+    </script>
+    <!-- WinJS references -->
+    <link href="//Microsoft.WinJS.1.0/css/ui-dark.css" rel="stylesheet" />
+    <script src="//Microsoft.WinJS.1.0/js/base.js"></script>
+    <script src="//Microsoft.WinJS.1.0/js/ui.js"></script>
+
+    <!-- splits references -->
+    <link href="/css/default.css" rel="stylesheet" />
+    <script src="/js/data.js"></script>
+    <script src="/js/default.js"></script>
+    <script src="/js/navigator.js"></script>
+    <script src="ms-appx:///Bing.Maps.JavaScript//js/veapicore.js"></script>
+    <script src="ms-appx:///Bing.Maps.JavaScript//js/veapimodules.js"></script>
+    <script src="/searchResults.js"></script>
+<style> 
+  ul.filters {
+    font-family: sans-serif;
+    position: fixed;
+    right: 10px;
+    top: 10px;
+    background-color: white;
+    list-style-type: none;
+  }
+  ul.filters li {
+    padding: 0.25em;
+    padding-left: 40px;
+    background-repeat: no-repeat;
+    color: black;
+  }
+  ul.filters li:hover {
+    background-color: #dadada;
+  }
+    div#map {
+        opacity: 0;
+        z-index: -1;
+        transition: opacity 0.4s ease-in-out;
+    }
+    div#map.shown {
+        opacity: 1;
+        z-index: 1;
+    }
+    div.articlesection article,
+    div.articlesection article div.article-content {
+        width: 100%;
+        height: 100%;
+    }
+    div.itemslist[aria-label="List of groups"] img[alt="Administrative"] ~ div.notification,
+    div.itemslist[aria-label="List of groups"] img[alt="Administrative"] {
+        background-color: #719bd9;
+    }
+    div.itemslist[aria-label="List of groups"] img[alt="Recreation"] ~ div.notification,
+    div.itemslist[aria-label="List of groups"] img[alt="Recreation"] {
+        background-color: #ff8a22;
+    }
+    div.itemslist[aria-label="List of groups"] img[alt="Health Clinic"] ~ div.notification,
+    div.itemslist[aria-label="List of groups"] img[alt="Health Clinic"],
+    div.itemslist[aria-label="List of groups"] img[alt="Health and Hospitals System"] ~ div.notification,
+    div.itemslist[aria-label="List of groups"] img[alt="Health and Hospitals System"] {
+        background-color: #f34648;
+    }
+    div.itemslist[aria-label="List of groups"] img[alt="Police"] ~ div.notification,
+    div.itemslist[aria-label="List of groups"] img[alt="Police"],
+    div.itemslist[aria-label="List of groups"] img[alt="Police Station"] ~ div.notification,
+    div.itemslist[aria-label="List of groups"] img[alt="Police Station"],
+    div.itemslist[aria-label="List of groups"] img[alt="Sheriff, Corrections and Public Safety"] ~ div.notification,
+    div.itemslist[aria-label="List of groups"] img[alt="Sheriff, Corrections and Public Safety"] {
+        background-color: #3875d7;
+    }
+    div.itemslist[aria-label="List of groups"] img[alt="Human Resources"] ~ div.notification,
+    div.itemslist[aria-label="List of groups"] img[alt="Human Resources"] {
+        background-color: #3875d7;
+    }
+    div.itemslist[aria-label="List of groups"] img[alt="Veteran's Services"] ~ div.notification,
+    div.itemslist[aria-label="List of groups"] img[alt="Veteran's Services"] {
+        background-color: #3875d7;
+    }
+    div.itemslist[aria-label="List of groups"] img[alt="Property & Tax"] ~ div.notification,
+    div.itemslist[aria-label="List of groups"] img[alt="Property & Tax"] {
+        background-color: #3875d7;
+    }
+    div.itemslist[aria-label="List of groups"] img[alt="Building & Zoning"] ~ div.notification,
+    div.itemslist[aria-label="List of groups"] img[alt="Building & Zoning"] {
+        background-color: #16b39e;
+    }
+    div.itemslist[aria-label="List of groups"] img[alt="Technology Centers"] ~ div.notification,
+    div.itemslist[aria-label="List of groups"] img[alt="Technology Centers"],
+    div.itemslist[aria-label="List of groups"] img[alt="Information Technology"] ~ div.notification,
+    div.itemslist[aria-label="List of groups"] img[alt="Information Technology"] {
+        background-color: #5ec8bd;
+    }
+    div.itemslist[aria-label="List of groups"] img[alt="Representitive's Office"] ~ div.notification,
+    div.itemslist[aria-label="List of groups"] img[alt="Representitive's Office"],
+    div.itemslist[aria-label="List of groups"] img[alt="Commissioner"] ~ div.notification,
+    div.itemslist[aria-label="List of groups"] img[alt="Commissioner"] {
+        background-color: #3875d7;
+    }
+    div.itemslist[aria-label="List of groups"] img[alt="Courts"] ~ div.notification,
+    div.itemslist[aria-label="List of groups"] img[alt="Courts"] {
+        background-color: #3875d7;
+    }
+    div.itemslist[aria-label="List of groups"] img[alt="Economic Development"] ~ div.notification,
+    div.itemslist[aria-label="List of groups"] img[alt="Economic Development"] {
+        background-color: #3ad63f;
+    }
+    div.itemslist[aria-label="List of groups"] img[alt="Public Records"] ~ div.notification,
+    div.itemslist[aria-label="List of groups"] img[alt="Public Records"] {
+        background-color: #3875d7;
+    }
+    div.itemslist[aria-label="List of groups"] img[alt="Finance"] ~ div.notification,
+    div.itemslist[aria-label="List of groups"] img[alt="Finance"] {
+        background-color: #bedb4b;
+    }
+    div.itemslist[aria-label="List of groups"] img[alt="Libraries"] ~ div.notification,
+    div.itemslist[aria-label="List of groups"] img[alt="Libraries"] {
+        background-color: #c69c6d;
+    }
+    div.itemslist[aria-label="List of groups"] img[alt="School"] ~ div.notification,
+    div.itemslist[aria-label="List of groups"] img[alt="School"] {
+        background-color: #a83980;
+    }
+    div.itemslist[aria-label="List of groups"] img[alt="Fire Department"] ~ div.notification,
+    div.itemslist[aria-label="List of groups"] img[alt="Fire Department"] {
+        background-color: #ed1c24;
+    }
+    div.itemslist[aria-label="List of groups"] img[alt="Community Centers"] ~ div.notification,
+    div.itemslist[aria-label="List of groups"] img[alt="Community Centers"] {
+        background-color: #29abe2;
+    }
+    div.itemslist[aria-label="List of groups"] img[alt="Workforce Center"] ~ div.notification,
+    div.itemslist[aria-label="List of groups"] img[alt="Workforce Center"] {
+        background-color: #ffcb04;
+    }
+    progress#results_progress:indeterminate {
+        position: absolute;
+        left: 0;
+        width: 100%;
+        top: 10px;
+        opacity: 0;
+        transition: opacity 0.4s ease-in-out;
+    }
+    progress#results_progress.shown:indeterminate {
+        opacity: 1;
+    }
+    #directionsItinerary { 
+        width: 25%; 
+        height: 100%; 
+        float: right; 
+        background-color:#fff;  
+        position: relative; 
+        display: none; 
+        color: #000; 
+        overflow: auto; 
+    }
+    div.comments {
+        height: 100%;
+        width: 100%;
+        z-index: 100;
+        position: absolute;
+        background-color: rgba(0, 0, 0, 1);
+    }
+    div.comments > div {
+        position: static !important;
+        width: 92%;
+        min-height: 2em;
+    }
+    div.tile {
+        transition: transform 0.7s ease-in-out;
+    }
+    /*div.tile:hover,*/
+    div.tile[notice]:hover,
+    div.tile[notice].show {
+        transform: translateY(-250px);
+    }
+    div.notification {
+        padding: 0.25em;
+        height: 250px;
+        width: 250px;
+        /*background-color: green;*/
+        position: relative;
+        top: 250px;
+    }
+    div.comments input,
+    div.comments textarea {
+        border-color: transparent;
+        color: white;
+        background-color: transparent;
+        width: 100%;
+    }
+    div.comments input {
+        font-weight: bold;
+        border-bottom: 1px solid rgb(40,40,40);
+    }
+    div.comments textarea {
+        opacity: 0.6;
+        height: 3em;
+    }
+    .splitpage .itemlistsection .itemlist div.comments .item {
+        -ms-grid-columns: 10px 1fr;
+    }
+    .splitpage .itemlistsection .itemlist div.comments .item .item-info .item-description {
+        opacity: 0.6;
+    }
+    /*https://cookcounty.socrata.com/resource/5kra-pjk3.json?$select=:id,building_,building_code,type_of_service,room_or_suite,main_phone_number,location_1&$order=type_of_service&$limit=5*/
+</style>
+</head>
+<body>
+    
+    <div id="contenthost" data-win-control="Application.PageControlNavigator" data-win-options="{home: '/pages/items/items.html'}"></div>
+        <progress id="results_progress"></progress>
+    <div id="directionsItinerary"> </div>    
+    <div id="map_holder" style="position: absolute; top: 0; right: 0; z-index: -1;">
+        <div id="map"></div>
+    </div>
+    <div style="display:none;" id="template_zone">
+        <div id="commentBase" class="win-container">
+            <div class="item">
+                <div class="item-info">
+                    <h6 class="item-subtitle" style="float: right;">Posted by <span style="font-weight:bold;" data-win-bind="author">&nbsp;</span> on <span class="win-type-ellipsis" data-win-bind="date">&nbsp;</span></h6>
+                    <h3 class="item-title win-type-ellipsis" data-win-bind="title">&nbsp;</h3>
+                    <h4 class="item-description" data-win-bind="text" style="border-top: 1px solid rgb(40,40,40);padding-top: 1em;">&nbsp;</h4>
+                    
+                </div>
+            </div>
+
+        </div>
+    </div>
+   <!-- <div id="appbar" data-win-control="WinJS.UI.AppBar">
+        <button data-win-control="WinJS.UI.AppBarCommand" data-win-options="{id:'cmd', label:'Command', icon:'placeholder'}" type="button"></button>
+         </div>-->
+</body>
+</html>

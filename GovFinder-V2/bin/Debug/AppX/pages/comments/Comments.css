@@ -1,0 +1,86 @@
+﻿.commentspage {
+    /*-ms-grid-columns: 1fr;*/
+    display: -ms-grid;
+    -ms-grid-rows: 140px,1fr;
+    height: 100%;
+    width: 100%;
+}
+
+
+
+
+@media screen and (-ms-view-state: fullscreen-landscape) {
+    .commentspage .commentlistdiv {
+        -ms-grid-row: 2;
+        margin-left: 120px;
+        height: 100%;
+    }
+     .commentspage .nocommentmsg {
+        -ms-grid-row: 2;
+        margin-left: 120px;
+        height: 100%;
+    }
+
+    .comment {
+        height: 250px;
+        width: 250px;
+        background-color: white;
+    }
+}
+
+@media screen and (-ms-view-state: filled) {
+    .commentspage .commentlistdiv {
+        -ms-grid-row: 2;
+        margin-left: 120px;
+        height: 100%;
+    }
+     .commentspage .nocommentmsg {
+        -ms-grid-row: 2;
+        margin-left: 120px;
+        height: 100%;
+    }
+    .comment {
+        height: 250px;
+        width: 250px;
+        background-color: white;
+    }
+}
+
+@media screen and (-ms-view-state: snapped) {
+    .commentspage .commentlistdiv {
+        -ms-grid-row: 2;
+        margin-left: 20px;
+        height: 100%;
+    }
+     .commentspage .nocommentmsg {
+        -ms-grid-row: 2;
+        margin-left: 20px;
+        height: 100%;
+    }
+       .comment {
+        height: 250px;
+        width: 280px;
+        background-color: white;
+    }
+    .newcommentpopup {
+        width:280px;
+    }
+}
+
+@media screen and (-ms-view-state: fullscreen-portrait) {
+    .commentspage .commentlistdiv {
+        -ms-grid-row: 2;
+        margin-left: 120px;
+        height: 100%;
+    }
+     .commentspage .nocommentmsg {
+        -ms-grid-row: 2;
+        margin-left: 120px;
+        height: 100%;
+    }
+     .comment {
+        height: 250px;
+        width: 250px;
+        background-color: white;
+    }
+}

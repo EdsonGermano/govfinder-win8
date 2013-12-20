@@ -1,0 +1,129 @@
+﻿/* Template for items in the ListView */
+.regularListIconTextItem1 {
+    width: 115px;
+    height: 80px;
+    overflow: hidden;
+    display: -ms-grid;
+}
+
+#searchedImageCharm {
+    width: 120px;
+    height: 150px;
+}
+
+#searchListCharm1 .win-container:not(.footprint):not(.hover) {
+    background-color: transparent;
+}
+
+#divTemplateCharm {
+    float: right;
+    text-align: left;
+    width: 100px;
+    margin-left: 10px;
+}
+
+.iconImage {
+    height: 20px;
+    width: 20px;
+    opacity: 0.5;
+    margin-top: 5px;
+}
+
+img.regularListIconTextItem1-Image {
+    width: 65px;
+    height: 65px;
+    margin: 15px;
+    -ms-grid-column: 1;
+    margin-left: 25px;
+}
+
+.regularListIconTextItem1-Detail {
+    -ms-grid-column: 2;
+    font-family: 'Segoe UI';
+    margin-left: 5px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    text-align:center;
+    font-size: 12px;
+    height: 45px;
+    width: 100px;
+}
+
+#listView1 .win-container .win-selectionbackground {
+    background-color: black;
+}
+
+#listView1 .win-container .win-selectioncheckmark {
+    /*background-color: transparent;*/
+    background-image: url('/images/Round.png');
+    background-repeat: no-repeat;
+}
+
+#backgroundColor {
+    background-color: #756F6C;
+}
+
+h5 {
+    text-align: justify;
+}
+
+.page-width {
+    width: 330px;
+}
+
+.pageBackground {
+    background-color: #39332E;
+}
+
+.fontColor {
+    color: white;
+    opacity: 0.5;
+}
+
+.backgroundButton {
+    color: black;
+    border-color: black;
+    opacity: 0.5;
+}
+
+#hrline {
+    margin-right: 40px;
+    margin-left: 45px;
+    margin-bottom: 20px;
+}
+
+
+
+#searchListCharm1 {
+    margin-left: 40px;
+}
+
+
+
+
+@media screen and (-ms-view-state: fullscreen-landscape) {
+    #listView1 {
+        width: auto;
+        height: 500px;
+        margin-left: 40px;
+    }
+}
+
+@media screen and (-ms-view-state: filled) {
+    #listView1 {
+        width: auto;
+        height: 500px;
+        margin-left: 40px;
+    }
+}
+
+@media screen and (-ms-view-state: snapped) {
+}
+
+@media screen and (-ms-view-state: fullscreen-portrait) {
+    #listView1 {
+        width: auto;
+        height: 800px;
+        margin-left: 50px;
+    }
+}

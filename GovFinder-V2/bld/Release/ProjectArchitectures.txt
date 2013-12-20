@@ -1,0 +1,2 @@
+C:\Posh_TFS\POSH.Socrata\GovFinderBackgroundTask\GovFinderBackgroundTask.csproj;neutral
+C:\Posh_TFS\POSH.Socrata\GovFinder-V2\GovFinderV2.jsproj;neutral

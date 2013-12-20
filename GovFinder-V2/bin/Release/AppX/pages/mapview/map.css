@@ -1,0 +1,69 @@
+﻿.mappage {
+     /*-ms-grid-columns: 106px 534px 50px 1fr;
+        display: -ms-grid;
+    height: 100%;
+    width: 100%;*/
+    -ms-grid-columns: 1fr 0px;
+    display: -ms-grid;
+    height: 100%;
+    width: 100%;   
+}
+
+    .mappage header[role=banner] {
+        -ms-grid-column: 1;
+        -ms-grid-column-span: 2;
+    }
+
+    .mappage header[role=banner] .pagetitle {
+        overflow: hidden;
+        width: calc(100% - 20px);
+    }
+
+    .mappage .articlesection {
+        -ms-grid-column: 1;
+        -ms-grid-row: 1;
+        -ms-grid-row-span: 2;
+       -ms-grid-column-span: 2;
+        overflow-y: auto;
+        position: relative;
+        z-index: 0;
+        padding-left: 0;
+        padding-right: 0;
+        /*padding-right: 120px;*/
+    }
+
+    [dir=rtl] .mappage .articlesection {
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+
+        .mappage .articlesection header {
+            /*-ms-grid-columns: 180px 20px 1fr;
+            -ms-grid-rows: 180px;
+            display: -ms-grid;
+            margin-bottom: 5px;
+            margin-top: 60px;*/
+        }
+
+            .mappage .articlesection header .text {
+                -ms-grid-column: 3;
+            }
+
+                .mappage .articlesection header .text .article-subtitle {
+                    margin-top: 4px;
+                }
+
+            .mappage .articlesection header .article-image {
+                height: 180px;
+                width: 180px;
+            }
+
+        .mappage .articlesection .article-content {
+            overflow-y: auto;
+        }
+
+            .mappage .articlesection .article-content p {
+                margin-bottom: 16pt;
+            }
+          
+
